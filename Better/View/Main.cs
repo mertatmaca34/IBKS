@@ -14,7 +14,7 @@ namespace Better
 
         private void Main_Load(object sender, EventArgs e)
         {
-
+            Console.WriteLine("Son değişiklik");
         }
 
         #region DropShadow
