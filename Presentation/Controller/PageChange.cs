@@ -4,7 +4,7 @@ namespace Presentation.Controller
 {
     internal class PageChange
     {
-        internal void Change(Main Main, Form SubForm, Panel MainPanel)
+        static internal void Change(Main Main, Form SubForm, Panel MainPanel)
         {
             if (MainPanel.Controls.Count > 0)
             {
@@ -26,11 +26,11 @@ namespace Presentation.Controller
                 CheckMode(Main,SubForm);
             }
         }
-        private void CheckMode(Main Main, Form SubForm)
+        static private void CheckMode(Main Main, Form SubForm)
         {
             if (Main.ButtonMode.Text == "Gündüz Mod")
             {
-                new Mode().NightMode(SubForm.Controls, null);
+                Mode.NightMode(SubForm.Controls, null);
             }
         }
     }

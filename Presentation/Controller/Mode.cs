@@ -5,7 +5,7 @@ namespace Presentation.Controller
 {
     internal class Mode
     {
-        internal void ChangeMode(Control.ControlCollection Controls, Button Button = null)
+        static internal void ChangeMode(Control.ControlCollection Controls, Button Button = null)
         {
             if (Button.Text == "Gece Modu")
             {
@@ -16,7 +16,7 @@ namespace Presentation.Controller
                 DayMode(Controls, Button);
             }
         }
-        internal void NightMode(Control.ControlCollection Controls, Button Button)
+        static internal void NightMode(Control.ControlCollection Controls, Button Button)
         {
             Color DarkGray = Color.FromArgb(24, 24, 24);
 
@@ -51,7 +51,7 @@ namespace Presentation.Controller
                 Button.Text = "Gündüz Mod";
             }
         }
-        internal void DayMode(Control.ControlCollection Controls, Button Button)
+        static internal void DayMode(Control.ControlCollection Controls, Button Button)
         {
             foreach (Control item in Controls)
             {
@@ -83,7 +83,7 @@ namespace Presentation.Controller
                 Button.Text = "Gece Modu";
             }
         }
-        private void ChangeButtonImageColor(Control.ControlCollection Controls, int colorValue)
+        static private void ChangeButtonImageColor(Control.ControlCollection Controls, int colorValue)
         {
             foreach (Control item in Controls)
             {

@@ -2,6 +2,8 @@
 using Presentation.View.Pages;
 using System;
 using System.Windows.Forms;
+using Sharp7;
+using PLC.Services;
 
 namespace Presentation
 {
@@ -14,6 +16,7 @@ namespace Presentation
 
         private void Main_Load(object sender, EventArgs e)
         {
+            //TODO
         }
 
         #region DropShadow
@@ -36,24 +39,24 @@ namespace Presentation
         }
         private void ButtonMaximize_Click(object sender, EventArgs e)
         {
-            new WindowStyle().Maximize(this);
+            WindowStyle.Maximize(this);
         }
         private void ButtonMinimize_Click(object sender, EventArgs e)
         {
-            new WindowStyle().Minimize(this);
+            WindowStyle.Minimize(this);
         }
         //Side Menu Actions
         private void ButtonMode_Click(object sender, EventArgs e)
         {
-            new Mode().ChangeMode(Controls,ButtonMode);
+            Mode.ChangeMode(Controls,ButtonMode);
         }
         private void WindowHeaderTableLayoutPanel_MouseDown(object sender, MouseEventArgs e)
         {
-            new WindowStyle().HoldAndMove(this);
+            WindowStyle.HoldAndMove(this);
         }
         private void ButtonHomePage_Click(object sender, EventArgs e)
         {
-            new PageChange().Change(this, new Home(), PanelContent);
+            PageChange.Change(this, new Home(), PanelContent);
         }
     }
 }

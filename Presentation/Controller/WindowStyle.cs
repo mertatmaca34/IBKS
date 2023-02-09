@@ -15,12 +15,12 @@ namespace Presentation.Controller
         internal extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         internal extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        internal void HoldAndMove(Form Form)
+        static internal void HoldAndMove(Form Form)
         {
             ReleaseCapture();
             SendMessage(Form.Handle, 0x112, 0xf012, 0);
         }
-        internal void Maximize(Form Form)
+        static internal void Maximize(Form Form)
         {
             if (Form.WindowState == FormWindowState.Normal)
             {
@@ -31,7 +31,7 @@ namespace Presentation.Controller
                 Form.WindowState = FormWindowState.Normal;
             }
         }
-        internal void Minimize(Form Form)
+        static internal void Minimize(Form Form)
         {
             Form.WindowState = FormWindowState.Minimized;
         }
