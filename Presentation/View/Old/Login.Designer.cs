@@ -1,4 +1,4 @@
-﻿namespace Better
+﻿namespace Presentation
 {
     partial class Login
     {
@@ -57,7 +57,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Better.Properties.Resources.logoLongWhite;
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.logoLongWhite;
             this.pictureBox1.Location = new System.Drawing.Point(530, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(30);
             this.pictureBox1.Name = "pictureBox1";

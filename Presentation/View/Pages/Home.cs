@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Better.View.Pages
+namespace Presentation.View.Pages
 {
     public partial class Home : Form
     {

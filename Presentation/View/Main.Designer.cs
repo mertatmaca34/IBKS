@@ -1,4 +1,4 @@
-﻿namespace Better
+﻿namespace Presentation
 {
     partial class Main
     {
@@ -76,7 +76,7 @@
             this.ButtonMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ScrollBar;
             this.ButtonMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
             this.ButtonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonMinimize.Image = global::Better.Properties.Resources.minimize_button_24px;
+            this.ButtonMinimize.Image = global::Presentation.Properties.Resources.minimize_button_24px;
             this.ButtonMinimize.Location = new System.Drawing.Point(1184, 0);
             this.ButtonMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonMinimize.Name = "ButtonMinimize";
@@ -92,7 +92,7 @@
             this.ButtonMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ScrollBar;
             this.ButtonMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
             this.ButtonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonMaximize.Image = global::Better.Properties.Resources.maximize_button_24px;
+            this.ButtonMaximize.Image = global::Presentation.Properties.Resources.maximize_button_24px;
             this.ButtonMaximize.Location = new System.Drawing.Point(1216, 0);
             this.ButtonMaximize.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonMaximize.Name = "ButtonMaximize";
@@ -108,7 +108,7 @@
             this.ButtonClose.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ScrollBar;
             this.ButtonClose.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
             this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonClose.Image = global::Better.Properties.Resources.close_button_24px;
+            this.ButtonClose.Image = global::Presentation.Properties.Resources.close_button_24px;
             this.ButtonClose.Location = new System.Drawing.Point(1248, 0);
             this.ButtonClose.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonClose.Name = "ButtonClose";
@@ -169,7 +169,7 @@
             this.ButtonHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonHomePage.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ButtonHomePage.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonHomePage.Image = global::Better.Properties.Resources.home_24px;
+            this.ButtonHomePage.Image = global::Presentation.Properties.Resources.home_24px;
             this.ButtonHomePage.Location = new System.Drawing.Point(7, 3);
             this.ButtonHomePage.Name = "ButtonHomePage";
             this.ButtonHomePage.Size = new System.Drawing.Size(75, 65);
@@ -188,7 +188,7 @@
             this.ButtonSimulation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSimulation.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ButtonSimulation.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonSimulation.Image = global::Better.Properties.Resources.monitor_24px;
+            this.ButtonSimulation.Image = global::Presentation.Properties.Resources.monitor_24px;
             this.ButtonSimulation.Location = new System.Drawing.Point(7, 74);
             this.ButtonSimulation.Name = "ButtonSimulation";
             this.ButtonSimulation.Size = new System.Drawing.Size(75, 65);
@@ -206,7 +206,7 @@
             this.ButtonCalibration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCalibration.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ButtonCalibration.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonCalibration.Image = global::Better.Properties.Resources.azimuth_24px;
+            this.ButtonCalibration.Image = global::Presentation.Properties.Resources.azimuth_24px;
             this.ButtonCalibration.Location = new System.Drawing.Point(7, 145);
             this.ButtonCalibration.Name = "ButtonCalibration";
             this.ButtonCalibration.Size = new System.Drawing.Size(75, 65);
@@ -224,7 +224,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Image = global::Better.Properties.Resources.alarm_24px;
+            this.button3.Image = global::Presentation.Properties.Resources.alarm_24px;
             this.button3.Location = new System.Drawing.Point(7, 216);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 65);
@@ -242,7 +242,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Image = global::Better.Properties.Resources.save_24px;
+            this.button4.Image = global::Presentation.Properties.Resources.save_24px;
             this.button4.Location = new System.Drawing.Point(7, 287);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 65);
@@ -260,7 +260,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.ForeColor = System.Drawing.Color.DimGray;
-            this.button5.Image = global::Better.Properties.Resources.settings_24px;
+            this.button5.Image = global::Presentation.Properties.Resources.settings_24px;
             this.button5.Location = new System.Drawing.Point(7, 358);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 65);
@@ -278,7 +278,7 @@
             this.ButtonMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonMode.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ButtonMode.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonMode.Image = global::Better.Properties.Resources.black_and_white_24px;
+            this.ButtonMode.Image = global::Presentation.Properties.Resources.black_and_white_24px;
             this.ButtonMode.Location = new System.Drawing.Point(7, 616);
             this.ButtonMode.Name = "ButtonMode";
             this.ButtonMode.Size = new System.Drawing.Size(75, 65);

@@ -1,9 +1,9 @@
-﻿using Better.Controller;
-using Better.View.Pages;
+﻿using Presentation.Controller;
+using Presentation.View.Pages;
 using System;
 using System.Windows.Forms;
 
-namespace Better
+namespace Presentation
 {
     public partial class Main : Form
     {

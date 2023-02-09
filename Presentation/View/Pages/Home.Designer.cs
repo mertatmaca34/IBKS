@@ -1,4 +1,4 @@
-﻿namespace Better.View.Pages
+﻿namespace Presentation.View.Pages
 {
     partial class Home
     {

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Better.Controller
+namespace Presentation.Controller
 {
     internal class Mode
     {

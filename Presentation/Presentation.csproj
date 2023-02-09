@@ -8,8 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{20703565-0EC2-4990-A390-B9497C494847}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Better</RootNamespace>
-    <AssemblyName>Better</AssemblyName>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>Presentation</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -212,6 +212,7 @@
     <Compile Include="Controller\Mode.cs" />
     <Compile Include="Controller\PageChange.cs" />
     <Compile Include="Controller\WindowStyle.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
     </Compile>
