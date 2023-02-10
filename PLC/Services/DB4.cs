@@ -1,4 +1,5 @@
 ﻿using PLC.Connections;
+using PLC.Interfaces;
 using PLC.Models;
 using System;
 
@@ -8,14 +9,15 @@ namespace PLC.Services
     {
         public DB4DTO Get()
         {
-            var client = new PLCConnections().Connect();
+            //IPLCConnections pLCConnections = new PLCConnections();
+            //var client = pLCConnections.Connect();
             DB4DTO dB4 = new DB4DTO();
             byte[] db4Buffer = new byte[12];
 
-            var PlcResult = client.DBRead(4, 0, db4Buffer.Length, db4Buffer);
+            //var PlcResult = client.DBRead(4, 0, db4Buffer.Length, db4Buffer);
             //Console.WriteLine(PlcResult.ToString());
 
-            AssignDB4(dB4, db4Buffer);
+            //AssignDB4(dB4, db4Buffer);
 
             return dB4;
         }

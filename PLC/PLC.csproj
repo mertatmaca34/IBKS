@@ -53,7 +53,12 @@
     <Compile Include="Services\DB41.cs" />
     <Compile Include="Utils\Get.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Data Access\Data Access.csproj">
+      <Project>{830c0fa0-3558-42ba-a0eb-489ccb7b9ce0}</Project>
+      <Name>Data Access</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

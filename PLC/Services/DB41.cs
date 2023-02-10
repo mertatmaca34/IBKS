@@ -1,4 +1,6 @@
-﻿using PLC.Connections;
+﻿using Data_Access.Interfaces;
+using Data_Access.Logger;
+using PLC.Connections;
 using PLC.Interfaces;
 using PLC.Models;
 using Sharp7;
@@ -8,25 +10,26 @@ namespace PLC.Services
 {
     public class DB41
     {
-        int plcResult;
         public DB41DTO Get()
         {
+            int plcResult = 0;
+
             IPLCConnections pLCConnections = new PLCConnections();
+            ILogger logger = new Logger();
 
             S7Client client = pLCConnections.Connect(plcResult);
-
             DB41DTO dB41 = new DB41DTO();
+
             byte[] dB41Buffer = new byte[248];
 
-            switch (plcResult)
+            if (plcResult == 0)
             {
-                case 0:
-                    AssignDB41(client, dB41, dB41Buffer);
-                    break;
-                case 1:
-
-                default:
-                    break;
+                AssignDB41(client, dB41, dB41Buffer);
+            }
+            else
+            {
+                logger.Add(client.ErrorText(plcResult));
+                Console.WriteLine(client.ErrorText(plcResult));
             }
             return dB41;
         }

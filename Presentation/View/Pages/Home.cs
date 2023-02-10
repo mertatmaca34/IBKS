@@ -40,11 +40,11 @@ namespace Presentation.View.Pages
                     LabelInstantHariciDebi2.Text = dB41Result.HariciDebi2 + " m³/d";
 
                     //DB4
-                    DB4 dB4 = new DB4();
+                    /*DB4 dB4 = new DB4();
 
                     var dB4Result = dB4.Get();
 
-                    LabelSystemTime.Text = dB4Result.SystemTime.ToString();
+                    LabelSystemTime.Text = dB4Result.SystemTime.ToString();*/
                 }
                 catch (Exception)
                 {

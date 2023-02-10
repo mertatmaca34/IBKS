@@ -6,7 +6,7 @@ namespace PLC.Connections
     public class PLCConnections : IPLCConnections
     {
         static readonly S7Client client = new S7Client(); //PLC Nesnesi Oluşturma
-        public S7Client Connect()
+        /*public S7Client Connect()
         {
             if (!client.Connected)
             {
@@ -17,7 +17,7 @@ namespace PLC.Connections
             {
                 return client;
             }
-        }
+        }*/
         public void Disconnect()
         {
             client.Disconnect();
