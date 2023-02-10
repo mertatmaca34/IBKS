@@ -8,7 +8,7 @@ namespace PLC.Services
     {
         public DB4DTO Get()
         {
-            var client = new PLCConnection().Connect();
+            var client = new PLCConnections().Connect();
             DB4DTO dB4 = new DB4DTO();
             byte[] db4Buffer = new byte[12];
 

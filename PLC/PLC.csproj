@@ -44,7 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connections\PLCConnection.cs" />
+    <Compile Include="Connections\PLCConnections.cs" />
+    <Compile Include="Interfaces\IPLCConnections.cs" />
     <Compile Include="Models\DB41DTO.cs" />
     <Compile Include="Models\DB4DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,9 +53,7 @@
     <Compile Include="Services\DB41.cs" />
     <Compile Include="Utils\Get.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
