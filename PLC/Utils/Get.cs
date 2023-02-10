@@ -1,17 +1,24 @@
 ﻿using Sharp7;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PLC.Utils
 {
     internal class Get
     {
-        static internal double Real(byte[] buffer, int offset)
+        static internal double Real(byte[] buffer, int offset, int? divider = null)
         {
-            return Math.Round(S7.GetRealAt(buffer, offset), 2);
+            if (divider.HasValue)
+            {
+                return Math.Round((double)(S7.GetRealAt(buffer, offset) / divider), 2);
+            }
+            else
+            {
+                return Math.Round(S7.GetRealAt(buffer, offset), 2);
+            }
+        }
+        static internal DateTime Time(byte[] buffer, int offset)
+        {
+            return S7.GetDTLAt(buffer, offset);
         }
     }
 }

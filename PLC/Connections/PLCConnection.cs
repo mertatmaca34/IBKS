@@ -1,24 +1,26 @@
 ﻿using Sharp7;
-using System.Collections.Generic;
+using System;
 
 namespace PLC.Connections
 {
-    internal class PLCConnection
+    public class PLCConnection
     {
         static readonly S7Client client = new S7Client(); //PLC Nesnesi Oluşturma
-
-        internal S7Client OpenConnection()
+        public S7Client Connect()
         {
             if (!client.Connected)
             {
-                _ = client.ConnectTo("10.33.3.253", 0, 1);
-
+                int plcResult = client.ConnectTo("10.33.2.253", 0, 1);
                 return client;
             }
             else
             {
                 return client;
             }
+        }
+        public void Disconnect()
+        {
+            client.Disconnect();
         }
     }
 }

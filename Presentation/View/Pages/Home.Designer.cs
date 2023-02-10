@@ -107,7 +107,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
+            this.LabelSystemTime = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label73 = new System.Windows.Forms.Label();
@@ -1212,7 +1212,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel8, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
@@ -1231,7 +1231,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel8.Controls.Add(this.label76, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label77, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.LabelSystemTime, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(483, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -1251,16 +1251,16 @@
             this.label76.TabIndex = 1;
             this.label76.Text = "SİSTEM SAATİ: ";
             // 
-            // label77
+            // LabelSystemTime
             // 
-            this.label77.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(98, 2);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(85, 15);
-            this.label77.TabIndex = 1;
-            this.label77.Text = "SİSTEM SAATİ: ";
+            this.LabelSystemTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LabelSystemTime.AutoSize = true;
+            this.LabelSystemTime.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSystemTime.Location = new System.Drawing.Point(98, 2);
+            this.LabelSystemTime.Name = "LabelSystemTime";
+            this.LabelSystemTime.Size = new System.Drawing.Size(11, 15);
+            this.LabelSystemTime.TabIndex = 1;
+            this.LabelSystemTime.Text = "-";
             // 
             // tableLayoutPanel5
             // 
@@ -1503,7 +1503,7 @@
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label LabelSystemTime;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Timer TimerReadPLC;
     }

@@ -2,8 +2,6 @@
 using Presentation.View.Pages;
 using System;
 using System.Windows.Forms;
-using Sharp7;
-using PLC.Services;
 
 namespace Presentation
 {
@@ -48,7 +46,7 @@ namespace Presentation
         //Side Menu Actions
         private void ButtonMode_Click(object sender, EventArgs e)
         {
-            Mode.ChangeMode(Controls,ButtonMode);
+            Mode.ChangeMode(Controls, ButtonMode);
         }
         private void WindowHeaderTableLayoutPanel_MouseDown(object sender, MouseEventArgs e)
         {
