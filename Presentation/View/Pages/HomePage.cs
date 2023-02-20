@@ -19,33 +19,7 @@ namespace Presentation.View.Pages
         {
             CheckForIllegalCrossThreadCalls = false;
 
-            connection.Connect("10.33.2.253", 0, 1);
-        }
-        
-        public enum Offsets
-        {
-            TesisDebi = 0,
-            TesisGunlukDebi = 12,
-            DesarjDebi = 60,
-            HariciDebi = 52,
-            HariciDebi2 = 56,
-            NumuneHiz = 4,
-            NumuneDebi = 8,
-            Ph = 16,
-            Iletkenlik = 20,
-            CozunmusOksijen = 24,
-            NumuneSicaklik = 28,
-            Koi = 32,
-            Akm = 36,
-            KabinSicaklik = 40,
-            KabinNem = 44,
-            Pompa1Hz = 140,
-            Pompa2Hz = 144,
-            UpsCikisVolt = 148,
-            UpsGirisVolt = 152,
-            UpsKapasite = 156,
-            UpsSicaklik = 160,
-            UpsYuk = 164
+            connection.Connect("10.33.1.253", 0, 1);
         }
 
         private void TimerReadPLC_Tick(object sender, EventArgs e)
@@ -55,12 +29,10 @@ namespace Presentation.View.Pages
             {
                 try
                 {
-                    byte[] buffer = connection.ReadData(41, 0, 248);
-
                     //DB41
-                    DB41DTO dB41 = connection.AssignDB41(buffer);
+                    byte[] buffer41 = connection.ReadData(41, 0, 248);
 
-                    //var dB41Result = dB41.Get();
+                    DB41DTO dB41 = connection.AssignDB41(buffer41);
 
                     LabelInstantAkm.Text = dB41.Akm + " mg/l";
                     LabelInstantCozunmusOksijen.Text = dB41.CozunmusOksijen + " mg/l";
@@ -74,13 +46,12 @@ namespace Presentation.View.Pages
                     LabelInstantHariciDebi.Text = dB41.HariciDebi + " m³/d";
                     LabelInstantHariciDebi2.Text = dB41.HariciDebi2 + " m³/d";
 
-                    /*
                     //DB4
-                    DB4 dB4 = new DB4();
+                    byte[] buffer4 = connection.ReadData(4, 0, 12);
 
-                    var dB4Result = dB4.Get();
+                    DB4DTO dB4 = connection.AssignDB4(buffer4);
 
-                    LabelSystemTime.Text = dB4Result.SystemTime.ToString();*/
+                    LabelSystemTime.Text = dB4.SystemTime.ToString();
                 }
                 catch (Exception ex)
                 {

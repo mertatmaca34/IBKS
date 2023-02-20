@@ -54,7 +54,7 @@ namespace Presentation
 
             if (result != 0)
             {
-                throw new Exception("Error reading data from PLC.");
+                throw new Exception(result + client.ErrorText(result));
             }
 
             return buffer;
@@ -90,6 +90,14 @@ namespace Presentation
 
             return dB41;
         }
-    }
+        public DB4DTO AssignDB4(byte[] buffer)
+        {
+            DB4DTO dB4 = new DB4DTO();
+            _ = client.DBRead(4, 0, buffer.Length, buffer);
 
+            dB4.SystemTime = Get.Time(buffer, 0);
+
+            return dB4;
+        }
+    }
 }
