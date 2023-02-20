@@ -3,9 +3,9 @@ using System;
 
 namespace PLC.Utils
 {
-    internal class Get
+    public class Get
     {
-        static internal double Real(byte[] buffer, int offset, int? divider = null)
+        static public double Real(byte[] buffer, int offset, int? divider = null)
         {
             if (divider.HasValue)
             {
@@ -16,7 +16,7 @@ namespace PLC.Utils
                 return Math.Round(S7.GetRealAt(buffer, offset), 2);
             }
         }
-        static internal DateTime Time(byte[] buffer, int offset)
+        static public DateTime Time(byte[] buffer, int offset)
         {
             return S7.GetDTLAt(buffer, offset);
         }

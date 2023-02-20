@@ -1,12 +1,9 @@
-﻿using Sharp7;
-using System.ComponentModel.DataAnnotations;
-using System;
-using PLC.Models;
-using PLC.Services;
+﻿using PLC.Models;
 using PLC.Utils;
-using PLC;
+using Sharp7;
+using System;
 
-namespace PLC
+namespace Presentation
 {
     public sealed class PlcServices
     {

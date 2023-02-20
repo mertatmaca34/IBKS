@@ -1387,15 +1387,16 @@
             this.TimerReadPLC.Interval = 1000;
             this.TimerReadPLC.Tick += new System.EventHandler(this.TimerReadPLC_Tick);
             // 
-            // Home
+            // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 688);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Home";
+            this.Name = "HomePage";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
