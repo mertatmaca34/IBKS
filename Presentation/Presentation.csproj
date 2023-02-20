@@ -215,7 +215,6 @@
     <Compile Include="Controller\Mode.cs" />
     <Compile Include="Controller\PageChange.cs" />
     <Compile Include="Controller\WindowStyle.cs" />
-    <Compile Include="PlcConnection2.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
