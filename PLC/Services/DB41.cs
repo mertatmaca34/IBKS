@@ -12,24 +12,23 @@ namespace PLC.Services
     {
         public DB41DTO Get()
         {
-            int plcResult = 0;
-
             IPLCConnections pLCConnections = new PLCConnections();
             ILogger logger = new Logger();
 
-            S7Client client = pLCConnections.Connect(plcResult);
+            S7Client client = pLCConnections.Connect();
+
             DB41DTO dB41 = new DB41DTO();
 
             byte[] dB41Buffer = new byte[248];
 
-            if (plcResult == 0)
+            if (client.Connected)
             {
-                AssignDB41(client, dB41, dB41Buffer);
+                AssignDB41(client , dB41, dB41Buffer);
             }
             else
             {
-                logger.Add(client.ErrorText(plcResult));
-                Console.WriteLine(client.ErrorText(plcResult));
+                //logger.Add(client.ErrorText(plcObject.PlcResult));
+                //Console.WriteLine(client.ErrorText(plcObject.PlcResult));
             }
             return dB41;
         }

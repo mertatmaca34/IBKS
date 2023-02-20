@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Data_Access.Interfaces
 {
     public interface ILogger
-    {
+    {   
         void Add(string message);
     }
 }

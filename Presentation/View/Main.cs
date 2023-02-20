@@ -54,7 +54,7 @@ namespace Presentation
         }
         private void ButtonHomePage_Click(object sender, EventArgs e)
         {
-            PageChange.Change(this, new Home(), PanelContent);
+            PageChange.Change(this, new HomePage(), PanelContent);
         }
     }
 }

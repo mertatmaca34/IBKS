@@ -1,6 +1,6 @@
 ﻿namespace Presentation.View.Pages
 {
-    partial class Home
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.

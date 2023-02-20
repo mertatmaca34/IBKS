@@ -1,4 +1,5 @@
 ﻿using PLC.Interfaces;
+using PLC.Models;
 using Sharp7;
 
 namespace PLC.Connections
@@ -6,27 +7,15 @@ namespace PLC.Connections
     public class PLCConnections : IPLCConnections
     {
         static readonly S7Client client = new S7Client(); //PLC Nesnesi Oluşturma
-        /*public S7Client Connect()
-        {
-            if (!client.Connected)
-            {
-                int plcResult = client.ConnectTo("10.33.2.253", 0, 1);
-                return client;
-            }
-            else
-            {
-                return client;
-            }
-        }*/
-        public void Disconnect()
-        {
-            client.Disconnect();
-        }
 
-        S7Client IPLCConnections.Connect(int res)
+        int res = client.ConnectTo("10.33.2.253", 0, 1);
+
+        S7Client IPLCConnections.Connect()
         {
-            S7Client client = new S7Client();
-            int plcResult = client.ConnectTo("10.33.2.253", 0, 1);
+            if (res != 0)
+            {
+                res = client.ConnectTo("10.33.2.253", 0, 1);
+            }
 
             return client;
         }
