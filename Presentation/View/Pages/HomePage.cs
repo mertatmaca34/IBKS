@@ -37,8 +37,8 @@ namespace Presentation.View.Pages
                 LabelInstantPh.Text = dB41.Ph.ToString();
                 LabelInstantIletkenlik.Text = dB41.Iletkenlik + " mS/cm";
                 LabelInstantKoi.Text = dB41.Koi + " mg/l";
-                LabelInstantAkisHizi.Text = dB41.NumuneHiz + " m/s";
-                LabelInstantDebi.Text = dB41.TesisDebi + " m³/d";
+                LabelInstantDebi.Text = dB41.NumuneHiz + " m/s";
+                LabelInstantAkisHizi.Text = dB41.TesisDebi + " m³/d";
                 LabelInstantDesarjDebi.Text = dB41.DesarjDebi + " m³/d";
                 LabelInstantHariciDebi.Text = dB41.HariciDebi + " m³/d";
                 LabelInstantHariciDebi2.Text = dB41.HariciDebi2 + " m³/d";
@@ -48,7 +48,7 @@ namespace Presentation.View.Pages
 
                 DB4DTO dB4 = connection.AssignDB4(buffer4);
 
-                LabelSystemTime.Text = dB4.SystemTime.ToString();
+                LabelSystemTime.Text = "Sistem Saati:: " + dB4.SystemTime.ToString();
             };
             bgw.RunWorkerAsync();
         }

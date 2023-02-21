@@ -18,7 +18,7 @@ namespace Presentation
         }
 
         #region DropShadow
-        private const int CS_DROPSHADOW = 0x20000;
+        /*private const int CS_DROPSHADOW = 0x20000;
         protected override CreateParams CreateParams
         {
             get
@@ -27,7 +27,7 @@ namespace Presentation
                 cp.ClassStyle |= CS_DROPSHADOW;
                 return cp;
             }
-        }
+        }*/
         #endregion
 
         //Window Actions

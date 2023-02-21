@@ -300,14 +300,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ControlBox = false;
             this.Controls.Add(this.PanelContent);
             this.Controls.Add(this.SideMenuTableLayoutPanel);
             this.Controls.Add(this.WindowHeaderTableLayoutPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);
             this.WindowHeaderTableLayoutPanel.ResumeLayout(false);
             this.WindowHeaderTableLayoutPanel.PerformLayout();
