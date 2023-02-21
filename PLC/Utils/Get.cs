@@ -20,5 +20,9 @@ namespace PLC.Utils
         {
             return S7.GetDTLAt(buffer, offset);
         }
+        static public Boolean Bit(byte[] buffer, int pos, int bit)
+        {
+            return S7.GetBitAt(buffer, pos, bit);
+        }
     }
 }

@@ -60,6 +60,20 @@ namespace Presentation
             return buffer;
         }
 
+        public byte[] ReadData(int startByte, int size)
+        {
+            byte[] buffer = new byte[size];
+
+            int result = client.EBRead(startByte, size, buffer);
+
+            if (result != 0)
+            {
+                throw new Exception(result + client.ErrorText(result));
+            }
+
+            return buffer;
+        }
+
         public DB41DTO AssignDB41(byte[] buffer)
         {
             DB41DTO dB41 = new DB41DTO();
@@ -90,6 +104,7 @@ namespace Presentation
 
             return dB41;
         }
+
         public DB4DTO AssignDB4(byte[] buffer)
         {
             DB4DTO dB4 = new DB4DTO();
@@ -98,6 +113,26 @@ namespace Presentation
             dB4.SystemTime = Get.Time(buffer, 0);
 
             return dB4;
+        }
+
+        public EBTagsDTO AssignEBTags(byte[] buffer)
+        {
+            EBTagsDTO eBTagsDTO = new EBTagsDTO();
+            _ = client.EBRead(0, buffer.Length, buffer);
+
+            eBTagsDTO.Kapi = Get.Bit(buffer, 25, 5);
+            eBTagsDTO.Duman = Get.Bit(buffer, 1, 1);
+            eBTagsDTO.SuBaskini = Get.Bit(buffer, 0, 7);
+            eBTagsDTO.AcilStop = Get.Bit(buffer, 25, 7);
+            eBTagsDTO.Pompa1Termik = Get.Bit(buffer, 27, 5);
+            eBTagsDTO.Pompa2Termik = Get.Bit(buffer, 28, 0);
+            eBTagsDTO.TemizSuTermik = Get.Bit(buffer, 28, 2);
+            eBTagsDTO.YikamaTanki = Get.Bit(buffer, 28, 3);
+            eBTagsDTO.Enerji = Get.Bit(buffer, 25, 6);
+            eBTagsDTO.Pompa1CalisiyorMu = Get.Bit(buffer, 27, 4);
+            eBTagsDTO.Pompa2CalisiyorMu = Get.Bit(buffer, 27, 7);
+
+            return eBTagsDTO;
         }
     }
 }

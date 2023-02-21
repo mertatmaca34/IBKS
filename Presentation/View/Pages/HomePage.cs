@@ -1,6 +1,8 @@
 ﻿using PLC.Models;
+using Presentation.Controller;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Presentation.View.Pages
@@ -49,9 +51,24 @@ namespace Presentation.View.Pages
                 DB4DTO dB4 = connection.AssignDB4(buffer4);
 
                 LabelSystemTime.Text = "Sistem Saati:: " + dB4.SystemTime.ToString();
+
+                //EB Tags
+                byte[] bufferEBTags = connection.ReadData(0, 30);
+
+                EBTagsDTO eBTagsDTO = connection.AssignEBTags(bufferEBTags);
+
+                PanelInstantKapi.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Kapi);
+                PanelInstantDuman.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Duman);
+                PanelInstantSuBaskini.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.SuBaskini);
+                PanelInstantAcilStop.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.AcilStop);
+                PanelInstantPompa1Termik.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Pompa1Termik);
+                PanelInstantPompa2Termik.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Pompa2Termik);
+                PanelInstantTemizSuPompaTermik.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.TemizSuTermik);
+                PanelInstantYikamaTanki.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.YikamaTanki);
+                PanelInstantEnerji.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Enerji);
+
             };
             bgw.RunWorkerAsync();
         }
-
     }
 }

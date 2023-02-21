@@ -48,6 +48,8 @@
     <Compile Include="Interfaces\IPLCConnections.cs" />
     <Compile Include="Models\DB41DTO.cs" />
     <Compile Include="Models\DB4DTO.cs" />
+    <Compile Include="Models\EBTagsDTO.cs" />
+    <Compile Include="Models\MBTagsDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DB4.cs" />
     <Compile Include="Services\DB41.cs" />
