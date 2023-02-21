@@ -45,18 +45,32 @@ namespace Presentation.View.Pages
                 LabelInstantHariciDebi.Text = dB41.HariciDebi + " m³/d";
                 LabelInstantHariciDebi2.Text = dB41.HariciDebi2 + " m³/d";
 
+                //Coloring State Panels
+                PanelInstantAkm.BackColor = ColorExtensions.FromDouble(dB41.Akm);
+                PanelInstantCozunmusOksijen.BackColor = ColorExtensions.FromDouble(dB41.CozunmusOksijen);
+                PanelInstantSicaklik.BackColor = ColorExtensions.FromDouble(dB41.KabinSicaklik);
+                PanelInstantPh.BackColor = ColorExtensions.FromDouble(dB41.Ph);
+                PanelInstantIletkenlik.BackColor = ColorExtensions.FromDouble(dB41.Iletkenlik);
+                PanelInstantKoi.BackColor = ColorExtensions.FromDouble(dB41.Koi);
+                PanelInstantDebi.BackColor = ColorExtensions.FromDouble(dB41.TesisDebi);
+                PanelInstantAkisHizi.BackColor = ColorExtensions.FromDouble(dB41.NumuneHiz);
+                PanelInstantDesarjDebi.BackColor = ColorExtensions.FromDouble(dB41.DesarjDebi);
+                PanelInstantHariciDebi.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi);
+                PanelInstantHariciDebi2.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi2);
+
                 //DB4
                 byte[] buffer4 = connection.ReadData(4, 0, 12);
 
                 DB4DTO dB4 = connection.AssignDB4(buffer4);
 
-                LabelSystemTime.Text = "Sistem Saati:: " + dB4.SystemTime.ToString();
+                LabelSystemTime.Text = "Sistem Saati: " + dB4.SystemTime.ToString();
 
                 //EB Tags
                 byte[] bufferEBTags = connection.ReadData(0, 30);
 
                 EBTagsDTO eBTagsDTO = connection.AssignEBTags(bufferEBTags);
-
+                
+                //Coloring State Panels
                 PanelInstantKapi.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Kapi);
                 PanelInstantDuman.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Duman);
                 PanelInstantSuBaskini.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.SuBaskini);
@@ -66,7 +80,6 @@ namespace Presentation.View.Pages
                 PanelInstantTemizSuPompaTermik.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.TemizSuTermik);
                 PanelInstantYikamaTanki.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.YikamaTanki);
                 PanelInstantEnerji.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Enerji);
-
             };
             bgw.RunWorkerAsync();
         }

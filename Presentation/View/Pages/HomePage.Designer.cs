@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel14 = new System.Windows.Forms.Panel();
+            this.PanelInstantHariciDebi = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel19 = new System.Windows.Forms.Panel();
+            this.PanelInstantHariciDebi2 = new System.Windows.Forms.Panel();
             this.LabelInstantHariciDebi2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.LabelHourlyAvgAkisHizi = new System.Windows.Forms.Label();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel16 = new System.Windows.Forms.Panel();
+            this.PanelInstantDesarjDebi = new System.Windows.Forms.Panel();
             this.LabelInstantDesarjDebi = new System.Windows.Forms.Label();
             this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.LabelHourlyAvgHariciDebi = new System.Windows.Forms.Label();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel51 = new System.Windows.Forms.Panel();
+            this.PanelInstantDebi = new System.Windows.Forms.Panel();
             this.PanelInstantPompa2Termik = new System.Windows.Forms.Panel();
             this.tableLayoutPanel51 = new System.Windows.Forms.TableLayoutPanel();
             this.label55 = new System.Windows.Forms.Label();
@@ -130,7 +130,7 @@
             this.label52 = new System.Windows.Forms.Label();
             this.tableLayoutPanel76 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel77 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel43 = new System.Windows.Forms.Panel();
+            this.PanelInstantCozunmusOksijen = new System.Windows.Forms.Panel();
             this.LabelInstantCozunmusOksijen = new System.Windows.Forms.Label();
             this.tableLayoutPanel78 = new System.Windows.Forms.TableLayoutPanel();
             this.label78 = new System.Windows.Forms.Label();
@@ -141,7 +141,7 @@
             this.label49 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.PanelInstantSicaklik = new System.Windows.Forms.Panel();
             this.LabelInstantSicaklik = new System.Windows.Forms.Label();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -151,7 +151,7 @@
             this.LabelHourlyAvgSicaklik = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.PanelInstantAkm = new System.Windows.Forms.Panel();
             this.LabelInstantAkm = new System.Windows.Forms.Label();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -172,7 +172,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.PanelInstantKoi = new System.Windows.Forms.Panel();
             this.LabelInstantKoi = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
@@ -180,14 +180,14 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.LabelHourlyAvgKoi = new System.Windows.Forms.Label();
-            this.panel48 = new System.Windows.Forms.Panel();
+            this.PanelInstantIletkenlik = new System.Windows.Forms.Panel();
             this.LabelInstantIletkenlik = new System.Windows.Forms.Label();
             this.tableLayoutPanel81 = new System.Windows.Forms.TableLayoutPanel();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.PanelInstantAkisHizi = new System.Windows.Forms.Panel();
             this.LabelInstantDebi = new System.Windows.Forms.Label();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
@@ -198,7 +198,7 @@
             this.panel49 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.PanelInstantPh = new System.Windows.Forms.Panel();
             this.LabelInstantPh = new System.Windows.Forms.Label();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
@@ -283,15 +283,15 @@
             this.tableLayoutPanel42.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel14
+            // PanelInstantHariciDebi
             // 
-            this.panel14.BackColor = System.Drawing.Color.Gray;
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Margin = new System.Windows.Forms.Padding(0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(8, 47);
-            this.panel14.TabIndex = 3;
+            this.PanelInstantHariciDebi.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantHariciDebi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantHariciDebi.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantHariciDebi.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantHariciDebi.Name = "PanelInstantHariciDebi";
+            this.PanelInstantHariciDebi.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantHariciDebi.TabIndex = 3;
             // 
             // label23
             // 
@@ -352,7 +352,7 @@
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel21.Controls.Add(this.panel19, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.PanelInstantHariciDebi2, 0, 0);
             this.tableLayoutPanel21.Controls.Add(this.LabelInstantHariciDebi2, 3, 0);
             this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel22, 1, 0);
             this.tableLayoutPanel21.Controls.Add(this.panel20, 2, 0);
@@ -367,15 +367,15 @@
             this.tableLayoutPanel21.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel21.TabIndex = 0;
             // 
-            // panel19
+            // PanelInstantHariciDebi2
             // 
-            this.panel19.BackColor = System.Drawing.Color.Gray;
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(0, 0);
-            this.panel19.Margin = new System.Windows.Forms.Padding(0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(8, 47);
-            this.panel19.TabIndex = 3;
+            this.PanelInstantHariciDebi2.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantHariciDebi2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantHariciDebi2.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantHariciDebi2.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantHariciDebi2.Name = "PanelInstantHariciDebi2";
+            this.PanelInstantHariciDebi2.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantHariciDebi2.TabIndex = 3;
             // 
             // LabelInstantHariciDebi2
             // 
@@ -751,7 +751,7 @@
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel18.Controls.Add(this.panel16, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.PanelInstantDesarjDebi, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.LabelInstantDesarjDebi, 3, 0);
             this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel32, 1, 0);
             this.tableLayoutPanel18.Controls.Add(this.panel17, 2, 0);
@@ -766,15 +766,15 @@
             this.tableLayoutPanel18.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel18.TabIndex = 0;
             // 
-            // panel16
+            // PanelInstantDesarjDebi
             // 
-            this.panel16.BackColor = System.Drawing.Color.Gray;
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Margin = new System.Windows.Forms.Padding(0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(8, 47);
-            this.panel16.TabIndex = 3;
+            this.PanelInstantDesarjDebi.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantDesarjDebi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantDesarjDebi.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantDesarjDebi.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantDesarjDebi.Name = "PanelInstantDesarjDebi";
+            this.PanelInstantDesarjDebi.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantDesarjDebi.TabIndex = 3;
             // 
             // LabelInstantDesarjDebi
             // 
@@ -868,7 +868,7 @@
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel16.Controls.Add(this.panel14, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.PanelInstantHariciDebi, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.LabelInstantHariciDebi, 3, 0);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel19, 1, 0);
             this.tableLayoutPanel16.Controls.Add(this.panel15, 2, 0);
@@ -927,15 +927,15 @@
             this.tableLayoutPanel15.Size = new System.Drawing.Size(571, 49);
             this.tableLayoutPanel15.TabIndex = 20;
             // 
-            // panel51
+            // PanelInstantDebi
             // 
-            this.panel51.BackColor = System.Drawing.Color.Gray;
-            this.panel51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel51.Location = new System.Drawing.Point(0, 0);
-            this.panel51.Margin = new System.Windows.Forms.Padding(0);
-            this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(8, 47);
-            this.panel51.TabIndex = 3;
+            this.PanelInstantDebi.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantDebi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantDebi.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantDebi.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantDebi.Name = "PanelInstantDebi";
+            this.PanelInstantDebi.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantDebi.TabIndex = 3;
             // 
             // PanelInstantPompa2Termik
             // 
@@ -1495,7 +1495,7 @@
             this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel29.Controls.Add(this.panel51, 0, 0);
+            this.tableLayoutPanel29.Controls.Add(this.PanelInstantDebi, 0, 0);
             this.tableLayoutPanel29.Controls.Add(this.LabelInstantAkisHizi, 3, 0);
             this.tableLayoutPanel29.Controls.Add(this.tableLayoutPanel30, 1, 0);
             this.tableLayoutPanel29.Controls.Add(this.panel52, 2, 0);
@@ -1595,7 +1595,7 @@
             this.tableLayoutPanel77.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel77.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel77.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel77.Controls.Add(this.panel43, 0, 0);
+            this.tableLayoutPanel77.Controls.Add(this.PanelInstantCozunmusOksijen, 0, 0);
             this.tableLayoutPanel77.Controls.Add(this.LabelInstantCozunmusOksijen, 3, 0);
             this.tableLayoutPanel77.Controls.Add(this.tableLayoutPanel78, 1, 0);
             this.tableLayoutPanel77.Controls.Add(this.panel44, 2, 0);
@@ -1610,15 +1610,15 @@
             this.tableLayoutPanel77.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel77.TabIndex = 0;
             // 
-            // panel43
+            // PanelInstantCozunmusOksijen
             // 
-            this.panel43.BackColor = System.Drawing.Color.Gray;
-            this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel43.Location = new System.Drawing.Point(0, 0);
-            this.panel43.Margin = new System.Windows.Forms.Padding(0);
-            this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(8, 47);
-            this.panel43.TabIndex = 3;
+            this.PanelInstantCozunmusOksijen.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantCozunmusOksijen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantCozunmusOksijen.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantCozunmusOksijen.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantCozunmusOksijen.Name = "PanelInstantCozunmusOksijen";
+            this.PanelInstantCozunmusOksijen.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantCozunmusOksijen.TabIndex = 3;
             // 
             // LabelInstantCozunmusOksijen
             // 
@@ -1736,7 +1736,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel4.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.PanelInstantSicaklik, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.LabelInstantSicaklik, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel26, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel4, 2, 0);
@@ -1751,15 +1751,15 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // panel3
+            // PanelInstantSicaklik
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(8, 47);
-            this.panel3.TabIndex = 3;
+            this.PanelInstantSicaklik.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantSicaklik.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantSicaklik.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantSicaklik.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantSicaklik.Name = "PanelInstantSicaklik";
+            this.PanelInstantSicaklik.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantSicaklik.TabIndex = 3;
             // 
             // LabelInstantSicaklik
             // 
@@ -1864,7 +1864,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.panel24, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.PanelInstantAkm, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.LabelInstantAkm, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel25, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
@@ -1879,15 +1879,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // panel24
+            // PanelInstantAkm
             // 
-            this.panel24.BackColor = System.Drawing.Color.Gray;
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Margin = new System.Windows.Forms.Padding(0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(8, 47);
-            this.panel24.TabIndex = 3;
+            this.PanelInstantAkm.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantAkm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantAkm.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantAkm.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantAkm.Name = "PanelInstantAkm";
+            this.PanelInstantAkm.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantAkm.TabIndex = 3;
             // 
             // LabelInstantAkm
             // 
@@ -2142,7 +2142,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel8.Controls.Add(this.panel7, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.PanelInstantKoi, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.LabelInstantKoi, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel8, 2, 0);
@@ -2157,15 +2157,15 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
-            // panel7
+            // PanelInstantKoi
             // 
-            this.panel7.BackColor = System.Drawing.Color.Gray;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 47);
-            this.panel7.TabIndex = 3;
+            this.PanelInstantKoi.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantKoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantKoi.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantKoi.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantKoi.Name = "PanelInstantKoi";
+            this.PanelInstantKoi.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantKoi.TabIndex = 3;
             // 
             // LabelInstantKoi
             // 
@@ -2249,15 +2249,15 @@
             this.LabelHourlyAvgKoi.TabIndex = 3;
             this.LabelHourlyAvgKoi.Text = "-";
             // 
-            // panel48
+            // PanelInstantIletkenlik
             // 
-            this.panel48.BackColor = System.Drawing.Color.Gray;
-            this.panel48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel48.Location = new System.Drawing.Point(0, 0);
-            this.panel48.Margin = new System.Windows.Forms.Padding(0);
-            this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(8, 47);
-            this.panel48.TabIndex = 3;
+            this.PanelInstantIletkenlik.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantIletkenlik.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantIletkenlik.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantIletkenlik.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantIletkenlik.Name = "PanelInstantIletkenlik";
+            this.PanelInstantIletkenlik.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantIletkenlik.TabIndex = 3;
             // 
             // LabelInstantIletkenlik
             // 
@@ -2333,7 +2333,7 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel13.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.PanelInstantAkisHizi, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.LabelInstantDebi, 3, 0);
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel14, 1, 0);
             this.tableLayoutPanel13.Controls.Add(this.panel12, 2, 0);
@@ -2348,15 +2348,15 @@
             this.tableLayoutPanel13.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel13.TabIndex = 0;
             // 
-            // panel11
+            // PanelInstantAkisHizi
             // 
-            this.panel11.BackColor = System.Drawing.Color.Gray;
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(8, 47);
-            this.panel11.TabIndex = 3;
+            this.PanelInstantAkisHizi.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantAkisHizi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantAkisHizi.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantAkisHizi.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantAkisHizi.Name = "PanelInstantAkisHizi";
+            this.PanelInstantAkisHizi.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantAkisHizi.TabIndex = 3;
             // 
             // LabelInstantDebi
             // 
@@ -2473,7 +2473,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel6.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.PanelInstantPh, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.LabelInstantPh, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel27, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel6, 2, 0);
@@ -2488,15 +2488,15 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(569, 47);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
-            // panel5
+            // PanelInstantPh
             // 
-            this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 47);
-            this.panel5.TabIndex = 3;
+            this.PanelInstantPh.BackColor = System.Drawing.Color.Gray;
+            this.PanelInstantPh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelInstantPh.Location = new System.Drawing.Point(0, 0);
+            this.PanelInstantPh.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelInstantPh.Name = "PanelInstantPh";
+            this.PanelInstantPh.Size = new System.Drawing.Size(8, 47);
+            this.PanelInstantPh.TabIndex = 3;
             // 
             // LabelInstantPh
             // 
@@ -2603,7 +2603,7 @@
             this.tableLayoutPanel80.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel80.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel80.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel80.Controls.Add(this.panel48, 0, 0);
+            this.tableLayoutPanel80.Controls.Add(this.PanelInstantIletkenlik, 0, 0);
             this.tableLayoutPanel80.Controls.Add(this.LabelInstantIletkenlik, 3, 0);
             this.tableLayoutPanel80.Controls.Add(this.tableLayoutPanel81, 1, 0);
             this.tableLayoutPanel80.Controls.Add(this.panel49, 2, 0);
@@ -2837,13 +2837,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel PanelInstantHariciDebi;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
-        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel PanelInstantHariciDebi2;
         private System.Windows.Forms.Label LabelInstantHariciDebi2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.Label label21;
@@ -2874,7 +2874,7 @@
         private System.Windows.Forms.Label LabelHourlyAvgAkisHizi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel PanelInstantDesarjDebi;
         private System.Windows.Forms.Label LabelInstantDesarjDebi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
         private System.Windows.Forms.Label label17;
@@ -2887,7 +2887,7 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label LabelHourlyAvgHariciDebi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.Panel PanelInstantDebi;
         private System.Windows.Forms.Panel PanelInstantPompa2Termik;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel51;
         private System.Windows.Forms.Label label55;
@@ -2938,7 +2938,7 @@
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel76;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel77;
-        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Panel PanelInstantCozunmusOksijen;
         private System.Windows.Forms.Label LabelInstantCozunmusOksijen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel78;
         private System.Windows.Forms.Label label78;
@@ -2949,7 +2949,7 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel PanelInstantSicaklik;
         private System.Windows.Forms.Label LabelInstantSicaklik;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
         private System.Windows.Forms.Label label4;
@@ -2959,7 +2959,7 @@
         private System.Windows.Forms.Label LabelHourlyAvgSicaklik;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel PanelInstantAkm;
         private System.Windows.Forms.Label LabelInstantAkm;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
         private System.Windows.Forms.Label label2;
@@ -2980,7 +2980,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel PanelInstantKoi;
         private System.Windows.Forms.Label LabelInstantKoi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label8;
@@ -2988,14 +2988,14 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label LabelHourlyAvgKoi;
-        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.Panel PanelInstantIletkenlik;
         private System.Windows.Forms.Label LabelInstantIletkenlik;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel81;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel PanelInstantAkisHizi;
         private System.Windows.Forms.Label LabelInstantDebi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.Label label12;
@@ -3006,7 +3006,7 @@
         private System.Windows.Forms.Panel panel49;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel PanelInstantPh;
         private System.Windows.Forms.Label LabelInstantPh;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
         private System.Windows.Forms.Label label6;
