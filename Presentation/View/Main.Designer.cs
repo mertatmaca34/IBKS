@@ -169,7 +169,7 @@
             this.ButtonHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonHomePage.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ButtonHomePage.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonHomePage.Image = global::Presentation.Properties.Resources.home_24px;
+            this.ButtonHomePage.Image = global::Presentation.Properties.Resources.filled_home_24px;
             this.ButtonHomePage.Location = new System.Drawing.Point(7, 3);
             this.ButtonHomePage.Name = "ButtonHomePage";
             this.ButtonHomePage.Size = new System.Drawing.Size(75, 65);
@@ -306,6 +306,7 @@
             this.Controls.Add(this.PanelContent);
             this.Controls.Add(this.SideMenuTableLayoutPanel);
             this.Controls.Add(this.WindowHeaderTableLayoutPanel);
+            this.MinimumSize = new System.Drawing.Size(1296, 736);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Main_Load);
