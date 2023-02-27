@@ -1,5 +1,6 @@
 ﻿using PLC.Models;
 using Presentation.Controller;
+using Presentation.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -18,9 +19,11 @@ namespace Presentation.View.Pages
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+            //Birden fazla thread kullanımı için yazılır.
             CheckForIllegalCrossThreadCalls = false;
 
-            connection.Connect("10.33.1.253", 0, 1);
+            //PLC'ye connection sağlanır.
+            connection.Connect("10.33.2.253", 0, 1);
         }
 
         private void TimerReadPLC_Tick(object sender, EventArgs e)
@@ -28,6 +31,7 @@ namespace Presentation.View.Pages
             var bgw = new BackgroundWorker();
             bgw.DoWork += delegate
             {
+                #region DB41 Okuma ve Label'lara atama
                 //DB41
                 byte[] buffer41 = connection.ReadData(41, 0, 248);
 
@@ -44,7 +48,9 @@ namespace Presentation.View.Pages
                 LabelInstantDesarjDebi.Text = dB41.DesarjDebi + " m³/d";
                 LabelInstantHariciDebi.Text = dB41.HariciDebi + " m³/d";
                 LabelInstantHariciDebi2.Text = dB41.HariciDebi2 + " m³/d";
+                #endregion
 
+                #region DB41 Sensörlerinin Durumlarını Gösteren Renklendirmeler
                 //Coloring State Panels
                 PanelInstantAkm.BackColor = ColorExtensions.FromDouble(dB41.Akm);
                 PanelInstantCozunmusOksijen.BackColor = ColorExtensions.FromDouble(dB41.CozunmusOksijen);
@@ -57,19 +63,25 @@ namespace Presentation.View.Pages
                 PanelInstantDesarjDebi.BackColor = ColorExtensions.FromDouble(dB41.DesarjDebi);
                 PanelInstantHariciDebi.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi);
                 PanelInstantHariciDebi2.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi2);
+                #endregion
 
+                #region DB4 Okuma ve Label'lara atama (Sistem Saati)
                 //DB4
                 byte[] buffer4 = connection.ReadData(4, 0, 12);
 
                 DB4DTO dB4 = connection.AssignDB4(buffer4);
 
                 LabelSystemTime.Text = "Sistem Saati: " + dB4.SystemTime.ToString();
+                #endregion
 
+                #region EBTag'ları (bit değerler) Okuma
                 //EB Tags
                 byte[] bufferEBTags = connection.ReadData(0, 30);
 
                 EBTagsDTO eBTagsDTO = connection.AssignEBTags(bufferEBTags);
-                
+                #endregion
+
+                #region EBTag'ların (bit'lerin) Durumlarını Gösteren Renklendirmeler
                 //Coloring State Panels
                 PanelInstantKapi.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Kapi);
                 PanelInstantDuman.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Duman);
@@ -80,6 +92,7 @@ namespace Presentation.View.Pages
                 PanelInstantTemizSuPompaTermik.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.TemizSuTermik);
                 PanelInstantYikamaTanki.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.YikamaTanki);
                 PanelInstantEnerji.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Enerji);
+                #endregion
             };
             bgw.RunWorkerAsync();
         }

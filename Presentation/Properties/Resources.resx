@@ -121,47 +121,11 @@
   <data name="monitor_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monitor_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filled_alarm_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filled_alarm_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filled_settings_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filled_settings_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filled_save_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filled_save_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="black_and_white_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\black_and_white_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filled_black_and_white_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filled_black_and_white_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="azimuth_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\azimuth_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filled_home_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filled_home_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close_button_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_button_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filled_monitor_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filled_monitor_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maximize_button_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maximize_button_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alarm_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarm_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimize_button_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize_button_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alarm_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarm_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="log_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\log_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,13 +133,64 @@
   <data name="filled_azimuth_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filled_azimuth_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logoLongWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoLongWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filled_black_and_white_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filled_black_and_white_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filled_save_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filled_save_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filled_log_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filled_log_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logoLongWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoLongWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maximize_button_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize_button_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="azimuth_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azimuth_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IBKS_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IBKS_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_button_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_button_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_and_white_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black_and_white_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filled_home_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filled_home_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filled_monitor_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filled_monitor_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filled_alarm_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filled_alarm_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filled_settings_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filled_settings_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HavuzSuyu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HavuzSuyu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HavuzSuyu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HavuzSuyu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TupAtiksiDolu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TupAtiksiDolu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TupAtiksiDolu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TupAtiksiDolu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
