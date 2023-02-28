@@ -193,4 +193,13 @@
   <data name="TupAtiksiDolu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TupAtiksiDolu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BoruAtiksu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BoruAtiksu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BoruAtiksu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BoruAtiksu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BoruAtiksuBos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BoruAtiksuBos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

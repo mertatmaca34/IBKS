@@ -93,6 +93,36 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BoruAtiksu1 {
+            get {
+                object obj = ResourceManager.GetObject("BoruAtiksu1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BoruAtiksu2 {
+            get {
+                object obj = ResourceManager.GetObject("BoruAtiksu2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BoruAtiksuBos {
+            get {
+                object obj = ResourceManager.GetObject("BoruAtiksuBos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_button_24px {
             get {
                 object obj = ResourceManager.GetObject("close_button_24px", resourceCulture);

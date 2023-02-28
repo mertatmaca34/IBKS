@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelBG = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // timer1
@@ -39,15 +39,16 @@
             this.timer1.Interval = 750;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel1
+            // PanelBG
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Presentation.Properties.Resources.IBKS_bg;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1190, 688);
-            this.panel1.TabIndex = 0;
+            this.PanelBG.BackColor = System.Drawing.Color.Transparent;
+            this.PanelBG.BackgroundImage = global::Presentation.Properties.Resources.IBKS_bg;
+            this.PanelBG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelBG.Location = new System.Drawing.Point(0, 0);
+            this.PanelBG.Name = "PanelBG";
+            this.PanelBG.Size = new System.Drawing.Size(1190, 688);
+            this.PanelBG.TabIndex = 0;
+            this.PanelBG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelBG_MouseClick);
             // 
             // Simulation
             // 
@@ -55,17 +56,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1190, 688);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelBG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Simulation";
             this.Text = "Simulation";
             this.Load += new System.EventHandler(this.Simulation_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Simulation_MouseClick);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelBG;
     }
 }

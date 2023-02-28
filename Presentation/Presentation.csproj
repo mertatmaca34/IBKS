@@ -383,9 +383,6 @@
     <None Include="Resources\5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IBKS_bg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\HavuzSuyu.png" />
   </ItemGroup>
   <ItemGroup>
@@ -405,6 +402,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TupAtiksiDolu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoruAtiksuBos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IBKS_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoruAtiksu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoruAtiksu1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
