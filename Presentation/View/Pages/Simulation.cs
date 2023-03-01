@@ -20,6 +20,7 @@ namespace Presentation.View.Pages
         PanelDoubleBuffered PanelAtiksuBoru = new PanelDoubleBuffered();
         PanelDoubleBuffered PanelAtiksuBoru2 = new PanelDoubleBuffered();
 
+
         public class PanelDoubleBuffered : System.Windows.Forms.Panel
         {
             public PanelDoubleBuffered()
@@ -38,22 +39,22 @@ namespace Presentation.View.Pages
 
         private void Simulation_Load(object sender, EventArgs e)
         {
-            NewPanelDoubleBuffered(PanelHavuzSuyu, new Point(96, 352), havuzSuyu1, true);
+            NewPanelDoubleBuffered(PanelHavuzSuyu, new Point(96, 352), havuzSuyu1);
             PanelBG.Controls.Add(PanelHavuzSuyu);
 
-            NewPanelDoubleBuffered(PanelTup, new Point(632, 78), tupAtiksiDolu1, true);
+            NewPanelDoubleBuffered(PanelTup, new Point(632, 78), tupAtiksiDolu1);
             PanelBG.Controls.Add(PanelTup);
 
-            NewPanelDoubleBuffered(PanelAtiksuBoru, new Point(309, 130), boruAtiksu1, true);
+            NewPanelDoubleBuffered(PanelAtiksuBoru, new Point(309, 130), boruAtiksu1);
             PanelBG.Controls.Add(PanelAtiksuBoru);
 
-            NewPanelDoubleBuffered(PanelAtiksuBoru2, new Point(0, 0), boruAtiksu1, true);
+            NewPanelDoubleBuffered(PanelAtiksuBoru2, new Point(0, 0), boruAtiksu1);
             PanelAtiksuBoru2.Parent = PanelAtiksuBoru;
             PanelBG.Controls.Add(PanelAtiksuBoru2);
 
         }
 
-        private void NewPanelDoubleBuffered(PanelDoubleBuffered panel, Point location, Bitmap bgImage, bool visible)
+        private void NewPanelDoubleBuffered(PanelDoubleBuffered panel, Point location, Bitmap bgImage)
         {
             panel.Location = location;
             panel.Size = new Size(bgImage.Width, bgImage.Height);
@@ -62,9 +63,9 @@ namespace Presentation.View.Pages
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            /*CheckNextFrame(PanelHavuzSuyu, havuzSuyu1, havuzSuyu2);
+            CheckNextFrame(PanelHavuzSuyu, havuzSuyu1, havuzSuyu2);
             CheckNextFrame(PanelTup, tupAtiksiDolu1, tupAtiksiDolu2);
-            CheckNextFrame(PanelAtiksuBoru, boruAtiksu1, boruAtiksu2);*/
+            CheckNextFrame(PanelAtiksuBoru, boruAtiksu1, boruAtiksu2);
         }
 
         private void CheckNextFrame(Panel panel, Bitmap bitmapFirstFrame, Bitmap bitmapSecondFrame)
@@ -83,15 +84,6 @@ namespace Presentation.View.Pages
             };
             bGW.RunWorkerAsync();
         }
-
-
-        private void Simulation_MouseClick(object sender, MouseEventArgs e)
-        {
-            int x = e.X;
-            int y = e.Y;
-            MessageBox.Show("Tıklanan konumun X koordinatı: " + x + "\nTıklanan konumun Y koordinatı: " + y);
-        }
-
         private void PanelBG_MouseClick(object sender, MouseEventArgs e)
         {
             int x = e.X;

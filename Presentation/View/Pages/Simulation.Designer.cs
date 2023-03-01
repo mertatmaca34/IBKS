@@ -61,7 +61,6 @@
             this.Name = "Simulation";
             this.Text = "Simulation";
             this.Load += new System.EventHandler(this.Simulation_Load);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Simulation_MouseClick);
             this.ResumeLayout(false);
 
         }
