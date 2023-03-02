@@ -381,10 +381,10 @@
             // 
             this.LabelInstantHariciDebi2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantHariciDebi2.AutoSize = true;
-            this.LabelInstantHariciDebi2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantHariciDebi2.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantHariciDebi2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantHariciDebi2.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantHariciDebi2.Name = "LabelInstantHariciDebi2";
-            this.LabelInstantHariciDebi2.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantHariciDebi2.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantHariciDebi2.TabIndex = 3;
             this.LabelInstantHariciDebi2.Text = "-";
             // 
@@ -463,10 +463,10 @@
             // 
             this.LabelInstantHariciDebi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantHariciDebi.AutoSize = true;
-            this.LabelInstantHariciDebi.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantHariciDebi.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantHariciDebi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantHariciDebi.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantHariciDebi.Name = "LabelInstantHariciDebi";
-            this.LabelInstantHariciDebi.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantHariciDebi.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantHariciDebi.TabIndex = 3;
             this.LabelInstantHariciDebi.Text = "-";
             // 
@@ -650,10 +650,10 @@
             // 
             this.LabelInstantAkisHizi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantAkisHizi.AutoSize = true;
-            this.LabelInstantAkisHizi.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantAkisHizi.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantAkisHizi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantAkisHizi.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantAkisHizi.Name = "LabelInstantAkisHizi";
-            this.LabelInstantAkisHizi.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantAkisHizi.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantAkisHizi.TabIndex = 3;
             this.LabelInstantAkisHizi.Text = "-";
             // 
@@ -780,10 +780,10 @@
             // 
             this.LabelInstantDesarjDebi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantDesarjDebi.AutoSize = true;
-            this.LabelInstantDesarjDebi.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantDesarjDebi.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantDesarjDebi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantDesarjDebi.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantDesarjDebi.Name = "LabelInstantDesarjDebi";
-            this.LabelInstantDesarjDebi.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantDesarjDebi.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantDesarjDebi.TabIndex = 3;
             this.LabelInstantDesarjDebi.Text = "-";
             // 
@@ -1624,10 +1624,10 @@
             // 
             this.LabelInstantCozunmusOksijen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantCozunmusOksijen.AutoSize = true;
-            this.LabelInstantCozunmusOksijen.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantCozunmusOksijen.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantCozunmusOksijen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantCozunmusOksijen.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantCozunmusOksijen.Name = "LabelInstantCozunmusOksijen";
-            this.LabelInstantCozunmusOksijen.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantCozunmusOksijen.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantCozunmusOksijen.TabIndex = 3;
             this.LabelInstantCozunmusOksijen.Text = "-";
             // 
@@ -1765,10 +1765,10 @@
             // 
             this.LabelInstantSicaklik.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantSicaklik.AutoSize = true;
-            this.LabelInstantSicaklik.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantSicaklik.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantSicaklik.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantSicaklik.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantSicaklik.Name = "LabelInstantSicaklik";
-            this.LabelInstantSicaklik.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantSicaklik.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantSicaklik.TabIndex = 3;
             this.LabelInstantSicaklik.Text = "-";
             // 
@@ -1893,10 +1893,10 @@
             // 
             this.LabelInstantAkm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantAkm.AutoSize = true;
-            this.LabelInstantAkm.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantAkm.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantAkm.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantAkm.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantAkm.Name = "LabelInstantAkm";
-            this.LabelInstantAkm.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantAkm.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantAkm.TabIndex = 3;
             this.LabelInstantAkm.Text = "-";
             // 
@@ -2171,10 +2171,10 @@
             // 
             this.LabelInstantKoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantKoi.AutoSize = true;
-            this.LabelInstantKoi.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantKoi.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantKoi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantKoi.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantKoi.Name = "LabelInstantKoi";
-            this.LabelInstantKoi.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantKoi.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantKoi.TabIndex = 3;
             this.LabelInstantKoi.Text = "-";
             // 
@@ -2263,10 +2263,10 @@
             // 
             this.LabelInstantIletkenlik.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantIletkenlik.AutoSize = true;
-            this.LabelInstantIletkenlik.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantIletkenlik.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantIletkenlik.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantIletkenlik.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantIletkenlik.Name = "LabelInstantIletkenlik";
-            this.LabelInstantIletkenlik.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantIletkenlik.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantIletkenlik.TabIndex = 3;
             this.LabelInstantIletkenlik.Text = "-";
             // 
@@ -2362,10 +2362,10 @@
             // 
             this.LabelInstantDebi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantDebi.AutoSize = true;
-            this.LabelInstantDebi.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantDebi.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantDebi.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantDebi.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantDebi.Name = "LabelInstantDebi";
-            this.LabelInstantDebi.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantDebi.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantDebi.TabIndex = 3;
             this.LabelInstantDebi.Text = "-";
             // 
@@ -2502,10 +2502,10 @@
             // 
             this.LabelInstantPh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelInstantPh.AutoSize = true;
-            this.LabelInstantPh.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LabelInstantPh.Location = new System.Drawing.Point(282, 16);
+            this.LabelInstantPh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LabelInstantPh.Location = new System.Drawing.Point(282, 15);
             this.LabelInstantPh.Name = "LabelInstantPh";
-            this.LabelInstantPh.Size = new System.Drawing.Size(11, 14);
+            this.LabelInstantPh.Size = new System.Drawing.Size(11, 16);
             this.LabelInstantPh.TabIndex = 3;
             this.LabelInstantPh.Text = "-";
             // 
@@ -2693,7 +2693,7 @@
             // TimerReadPLC
             // 
             this.TimerReadPLC.Enabled = true;
-            this.TimerReadPLC.Interval = 1000;
+            this.TimerReadPLC.Interval = 3000;
             this.TimerReadPLC.Tick += new System.EventHandler(this.TimerReadPLC_Tick);
             // 
             // HomePage

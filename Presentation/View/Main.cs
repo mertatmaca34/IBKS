@@ -7,6 +7,8 @@ namespace Presentation
 {
     public partial class Main : Form
     {
+        PlcServices connection = PlcServices.Instance;
+
         public Main()
         {
             InitializeComponent();
@@ -15,6 +17,9 @@ namespace Presentation
         private void Main_Load(object sender, EventArgs e)
         {
             //TODO
+
+            //PLC'ye connection sağlanır.
+            connection.Connect("10.33.2.253", 0, 1);
         }
 
         #region DropShadow

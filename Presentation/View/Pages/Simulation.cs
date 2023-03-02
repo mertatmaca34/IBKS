@@ -45,13 +45,12 @@ namespace Presentation.View.Pages
             NewPanelDoubleBuffered(PanelTup, new Point(632, 78), tupAtiksiDolu1);
             PanelBG.Controls.Add(PanelTup);
 
-            NewPanelDoubleBuffered(PanelAtiksuBoru, new Point(309, 130), boruAtiksu1);
+            NewPanelDoubleBuffered(PanelAtiksuBoru, new Point(310, 130), boruAtiksu1);
             PanelBG.Controls.Add(PanelAtiksuBoru);
 
             NewPanelDoubleBuffered(PanelAtiksuBoru2, new Point(0, 0), boruAtiksu1);
             PanelAtiksuBoru2.Parent = PanelAtiksuBoru;
             PanelBG.Controls.Add(PanelAtiksuBoru2);
-
         }
 
         private void NewPanelDoubleBuffered(PanelDoubleBuffered panel, Point location, Bitmap bgImage)
@@ -61,6 +60,7 @@ namespace Presentation.View.Pages
             panel.BackColor = Color.Transparent;
             panel.BackgroundImage = bgImage;
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             CheckNextFrame(PanelHavuzSuyu, havuzSuyu1, havuzSuyu2);
@@ -84,6 +84,7 @@ namespace Presentation.View.Pages
             };
             bGW.RunWorkerAsync();
         }
+
         private void PanelBG_MouseClick(object sender, MouseEventArgs e)
         {
             int x = e.X;

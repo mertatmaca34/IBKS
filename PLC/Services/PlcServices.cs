@@ -2,6 +2,9 @@
 using PLC.Utils;
 using Sharp7;
 using System;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Presentation
 {
@@ -10,7 +13,6 @@ namespace Presentation
         private static PlcServices instance = null;
         private static readonly object padlock = new object();
         private S7Client client;
-
         PlcServices()
         {
             client = new S7Client();
@@ -37,7 +39,7 @@ namespace Presentation
 
             if (result != 0)
             {
-                throw new Exception("Could not connect to PLC.");
+                return;
             }
         }
 
@@ -54,7 +56,10 @@ namespace Presentation
 
             if (result != 0)
             {
-                throw new Exception(result + client.ErrorText(result));
+                Disconnect();
+                Connect("10.33.2.253", 0, 1);
+
+                client.DBRead(db, startByte, size, buffer);
             }
 
             return buffer;
@@ -68,7 +73,10 @@ namespace Presentation
 
             if (result != 0)
             {
-                throw new Exception(result + client.ErrorText(result));
+                Disconnect();
+                Connect("10.33.2.253", 0, 1);
+
+                client.EBRead(startByte, size, buffer);
             }
 
             return buffer;
