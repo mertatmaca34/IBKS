@@ -2693,7 +2693,7 @@
             // TimerReadPLC
             // 
             this.TimerReadPLC.Enabled = true;
-            this.TimerReadPLC.Interval = 3000;
+            this.TimerReadPLC.Interval = 1000;
             this.TimerReadPLC.Tick += new System.EventHandler(this.TimerReadPLC_Tick);
             // 
             // HomePage
