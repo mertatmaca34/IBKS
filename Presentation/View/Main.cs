@@ -8,7 +8,7 @@ namespace Presentation
 {
     public partial class Main : Form
     {
-        PlcServices connection = PlcServices.Instance;
+        PageOperations pageOperations = PageOperations.Instance;
 
         public Main()
         {
@@ -17,10 +17,7 @@ namespace Presentation
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //TODO
-
-            //PLC'ye connection sağlanır.
-            connection.Connect("10.33.2.253", 0, 1);
+            PageChange.Change(this, pageOperations.homePage, PanelContent);
         }
 
         #region DropShadow
@@ -60,7 +57,7 @@ namespace Presentation
         }
         private void ButtonHomePage_Click(object sender, EventArgs e)
         {
-            PageChange.Change(this, new HomePage(), PanelContent);
+            PageChange.Change(this, pageOperations.homePage, PanelContent);
         }
     }
 }

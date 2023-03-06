@@ -222,6 +222,7 @@
     <Compile Include="Controller\ColorExtensions.cs" />
     <Compile Include="Controller\Mode.cs" />
     <Compile Include="Controller\PageChange.cs" />
+    <Compile Include="Controller\PageOperations.cs" />
     <Compile Include="Controller\WindowStyle.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
