@@ -52,12 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contexts\IBKSContext.cs" />
     <Compile Include="Models\LimitsDTO.cs" />
     <Compile Include="Models\MinuteDataSendDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

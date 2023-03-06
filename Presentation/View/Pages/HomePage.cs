@@ -1,9 +1,7 @@
 ﻿using PLC.Models;
 using Presentation.Controller;
-using Presentation.Properties;
 using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Presentation.View.Pages
@@ -36,7 +34,7 @@ namespace Presentation.View.Pages
                 //DB41
                 byte[] buffer41 = connection.ReadData(41, 0, 248);
 
-                if(buffer41 != null)
+                if (buffer41 != null)
                 {
                     DB41DTO dB41 = connection.AssignDB41(buffer41);
 
@@ -73,7 +71,7 @@ namespace Presentation.View.Pages
                 //DB4
                 byte[] buffer4 = connection.ReadData(4, 0, 12);
 
-                if(buffer4 != null)
+                if (buffer4 != null)
                 {
                     DB4DTO dB4 = connection.AssignDB4(buffer4);
 
