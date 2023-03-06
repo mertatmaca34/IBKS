@@ -38,26 +38,36 @@ namespace Presentation
         {
             Close();
         }
+
         private void ButtonMaximize_Click(object sender, EventArgs e)
         {
             WindowStyle.Maximize(this);
         }
+
         private void ButtonMinimize_Click(object sender, EventArgs e)
         {
             WindowStyle.Minimize(this);
         }
+
         //Side Menu Actions
         private void ButtonMode_Click(object sender, EventArgs e)
         {
             Mode.ChangeMode(Controls, ButtonMode);
         }
+
         private void WindowHeaderTableLayoutPanel_MouseDown(object sender, MouseEventArgs e)
         {
             WindowStyle.HoldAndMove(this);
         }
+
         private void ButtonHomePage_Click(object sender, EventArgs e)
         {
             PageChange.Change(this, pageOperations.homePage, PanelContent);
+        }
+
+        private void ButtonSimulation_Click(object sender, EventArgs e)
+        {
+            PageChange.Change(this, pageOperations.simulation, PanelContent);
         }
     }
 }

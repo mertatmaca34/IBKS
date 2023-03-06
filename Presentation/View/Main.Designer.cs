@@ -196,6 +196,7 @@
             this.ButtonSimulation.Text = "Simülasyon";
             this.ButtonSimulation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ButtonSimulation.UseVisualStyleBackColor = true;
+            this.ButtonSimulation.Click += new System.EventHandler(this.ButtonSimulation_Click);
             // 
             // ButtonCalibration
             // 
