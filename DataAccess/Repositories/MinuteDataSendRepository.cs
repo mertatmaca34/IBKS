@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    internal class MinuteDataSendRepository : IMinuteDataSendRepository
+    public class MinuteDataSendRepository : IMinuteDataSendRepository
     {
         public void Add(MinuteDataSendDTO minuteDataSendDTO)
         {
