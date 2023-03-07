@@ -8,7 +8,7 @@ namespace Presentation
 {
     public partial class Main : Form
     {
-        PageOperations pageOperations = PageOperations.Instance;
+        readonly PageOperations pageOperations = PageOperations.Instance;
 
         public Main()
         {

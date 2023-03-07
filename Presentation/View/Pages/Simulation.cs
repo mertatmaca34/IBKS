@@ -8,20 +8,20 @@ namespace Presentation.View.Pages
 {
     public partial class Simulation : Form
     {
-        Bitmap havuzSuyu1 = new Bitmap(Resources.HavuzSuyu1);
-        Bitmap havuzSuyu2 = new Bitmap(Resources.HavuzSuyu2);
-        Bitmap tupAtiksiDolu1 = new Bitmap(Resources.TupAtiksiDolu1);
-        Bitmap tupAtiksiDolu2 = new Bitmap(Resources.TupAtiksiDolu2);
-        Bitmap boruAtiksu1 = new Bitmap(Resources.BoruAtiksu1);
-        Bitmap boruAtiksu2 = new Bitmap(Resources.BoruAtiksu2);
+        readonly Bitmap havuzSuyu1 = new Bitmap(Resources.HavuzSuyu1);
+        readonly Bitmap havuzSuyu2 = new Bitmap(Resources.HavuzSuyu2);
+        readonly Bitmap tupAtiksiDolu1 = new Bitmap(Resources.TupAtiksiDolu1);
+        readonly Bitmap tupAtiksiDolu2 = new Bitmap(Resources.TupAtiksiDolu2);
+        readonly Bitmap boruAtiksu1 = new Bitmap(Resources.BoruAtiksu1);
+        readonly Bitmap boruAtiksu2 = new Bitmap(Resources.BoruAtiksu2);
 
-        PanelDoubleBuffered PanelHavuzSuyu = new PanelDoubleBuffered();
-        PanelDoubleBuffered PanelTup = new PanelDoubleBuffered();
-        PanelDoubleBuffered PanelAtiksuBoru = new PanelDoubleBuffered();
-        PanelDoubleBuffered PanelAtiksuBoru2 = new PanelDoubleBuffered();
+        readonly PanelDoubleBuffered PanelHavuzSuyu = new PanelDoubleBuffered();
+        readonly PanelDoubleBuffered PanelTup = new PanelDoubleBuffered();
+        readonly PanelDoubleBuffered PanelAtiksuBoru = new PanelDoubleBuffered();
+        readonly PanelDoubleBuffered PanelAtiksuBoru2 = new PanelDoubleBuffered();
 
 
-        public class PanelDoubleBuffered : System.Windows.Forms.Panel
+        public class PanelDoubleBuffered : Panel
         {
             public PanelDoubleBuffered()
                 : base()
@@ -61,7 +61,7 @@ namespace Presentation.View.Pages
             panel.BackgroundImage = bgImage;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             CheckNextFrame(PanelHavuzSuyu, havuzSuyu1, havuzSuyu2);
             CheckNextFrame(PanelTup, tupAtiksiDolu1, tupAtiksiDolu2);

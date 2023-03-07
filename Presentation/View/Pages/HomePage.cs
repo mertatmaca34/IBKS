@@ -10,7 +10,7 @@ namespace Presentation.View.Pages
 {
     public partial class HomePage : Form
     {
-        PlcServices connection = PlcServices.Instance;
+        readonly PlcServices connection = PlcServices.Instance;
         private readonly IMinuteDataSendService minuteDataSendService = new MinuteDataSendService();
         DateTime lastMinute;
 

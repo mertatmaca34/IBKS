@@ -27,12 +27,9 @@ namespace Presentation
 
         }
 
-        private void tableLayoutPanelMain_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        private void TableLayoutPanelMain_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {
-            var iskiBlue = new SolidBrush(Color.FromArgb(0, 131, 200));
-            var white = new SolidBrush(Color.White);
 
-            e.Graphics.FillRectangle(e.Column == 1 ? iskiBlue : white, e.CellBounds);
         }
     }
 }

@@ -51,7 +51,7 @@
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelMain.Size = new System.Drawing.Size(1000, 600);
             this.tableLayoutPanelMain.TabIndex = 1;
-            this.tableLayoutPanelMain.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tableLayoutPanelMain_CellPaint);
+            this.tableLayoutPanelMain.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.TableLayoutPanelMain_CellPaint);
             // 
             // pictureBox1
             // 

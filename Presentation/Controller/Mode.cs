@@ -18,7 +18,7 @@ namespace Presentation.Controller
         }
         static internal void NightMode(Control.ControlCollection Controls, Button Button)
         {
-            Color DarkGray = Color.FromArgb(24, 24, 24);
+           // Color DarkGray = Color.FromArgb(24, 24, 24);
 
             foreach (Control item in Controls)
             {

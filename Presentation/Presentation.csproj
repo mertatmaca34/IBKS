@@ -220,7 +220,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controller\ColorExtensions.cs" />
-    <Compile Include="Controller\MinuteChecker.cs" />
     <Compile Include="Controller\Mode.cs" />
     <Compile Include="Controller\PageChange.cs" />
     <Compile Include="Controller\PageOperations.cs" />
@@ -432,9 +431,7 @@
   <ItemGroup>
     <None Include="Resources\BoruAtiksu1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
