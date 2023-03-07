@@ -14,7 +14,7 @@ namespace PLC.Services
             DB4DTO dB4 = new DB4DTO();
             byte[] db4Buffer = new byte[12];
 
-            var PlcResult = client.DBRead(4, 0, db4Buffer.Length, db4Buffer);
+            _ = client.DBRead(4, 0, db4Buffer.Length, db4Buffer);
 
             AssignDB4(dB4, db4Buffer);
 

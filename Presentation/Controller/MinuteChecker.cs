@@ -8,7 +8,7 @@ namespace Presentation.Controller
 {
     public class MinuteChecker
     {
-        DateTime LastMinute;
+        readonly DateTime LastMinute;
         public void Check(DateTime dateTime)
         {
 

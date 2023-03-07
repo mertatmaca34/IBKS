@@ -14,7 +14,7 @@ namespace Business.Services
 {
     public class MinuteDataSendService : IMinuteDataSendService
     {
-        IMinuteDataSendRepository MinuteDataSendRepository = new MinuteDataSendRepository();
+        readonly IMinuteDataSendRepository MinuteDataSendRepository = new MinuteDataSendRepository();
         public void Add(DB41DTO dB41DTO)
         {
             var minuteSendDataDTO = new MinuteDataSendDTO

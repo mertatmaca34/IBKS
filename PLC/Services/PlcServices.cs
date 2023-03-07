@@ -12,7 +12,7 @@ namespace Presentation
     {
         private static PlcServices instance = null;
         private static readonly object padlock = new object();
-        private S7Client client;
+        private readonly S7Client client;
         PlcServices()
         {
             client = new S7Client();
