@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +55,10 @@
     <ProjectReference Include="..\DataAccess\DataAcces.csproj">
       <Project>{830c0fa0-3558-42ba-a0eb-489ccb7b9ce0}</Project>
       <Name>DataAcces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLC\PLC.csproj">
+      <Project>{750656c5-5306-4a37-9e25-fe0f06d46b33}</Project>
+      <Name>PLC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
