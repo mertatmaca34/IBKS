@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications", "Notifications\Notifications.csproj", "{E59AB142-DA50-4D1F-8D35-7372DFA9F2E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calibration", "Calibration\Calibration.csproj", "{F1E85617-4A53-45A1-BB3B-37DE1183DDFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E59AB142-DA50-4D1F-8D35-7372DFA9F2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E59AB142-DA50-4D1F-8D35-7372DFA9F2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E59AB142-DA50-4D1F-8D35-7372DFA9F2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E85617-4A53-45A1-BB3B-37DE1183DDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E85617-4A53-45A1-BB3B-37DE1183DDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E85617-4A53-45A1-BB3B-37DE1183DDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E85617-4A53-45A1-BB3B-37DE1183DDFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

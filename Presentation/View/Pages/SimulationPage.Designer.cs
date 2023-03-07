@@ -1,6 +1,6 @@
 ﻿namespace Presentation.View.Pages
 {
-    partial class Simulation
+    partial class SimulationPage
     {
         /// <summary>
         /// Required designer variable.

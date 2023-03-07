@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Presentation.View.Pages
 {
-    public partial class Simulation : Form
+    public partial class SimulationPage : Form
     {
         readonly Bitmap havuzSuyu1 = new Bitmap(Resources.HavuzSuyu1);
         readonly Bitmap havuzSuyu2 = new Bitmap(Resources.HavuzSuyu2);
@@ -30,7 +30,7 @@ namespace Presentation.View.Pages
             }
         }
 
-        public Simulation()
+        public SimulationPage()
         {
             CheckForIllegalCrossThreadCalls = false;
 

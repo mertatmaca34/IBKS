@@ -69,5 +69,10 @@ namespace Presentation
         {
             PageChange.Change(this, pageOperations.simulation, PanelContent);
         }
+
+        private void ButtonCalibration_Click(object sender, EventArgs e)
+        {
+            PageChange.Change(this, pageOperations.calibration, PanelContent);
+        }
     }
 }

@@ -216,6 +216,7 @@
             this.ButtonCalibration.Text = "Kalibrasyon";
             this.ButtonCalibration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ButtonCalibration.UseVisualStyleBackColor = true;
+            this.ButtonCalibration.Click += new System.EventHandler(this.ButtonCalibration_Click);
             // 
             // button3
             // 

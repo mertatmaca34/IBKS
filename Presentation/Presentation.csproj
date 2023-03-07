@@ -201,6 +201,7 @@
     <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -244,17 +245,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Pages\CalibrationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pages\CalibrationPage.Designer.cs">
+      <DependentUpon>CalibrationPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Pages\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Pages\Simulation.cs">
+    <Compile Include="View\Pages\SimulationPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Pages\Simulation.Designer.cs">
-      <DependentUpon>Simulation.cs</DependentUpon>
+    <Compile Include="View\Pages\SimulationPage.Designer.cs">
+      <DependentUpon>SimulationPage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -267,11 +274,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Pages\CalibrationPage.resx">
+      <DependentUpon>CalibrationPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Pages\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Pages\Simulation.resx">
-      <DependentUpon>Simulation.cs</DependentUpon>
+    <EmbeddedResource Include="View\Pages\SimulationPage.resx">
+      <DependentUpon>SimulationPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />

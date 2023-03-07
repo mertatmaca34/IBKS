@@ -9,11 +9,13 @@ namespace Presentation.Controller
         private static readonly object padlock = new object();
 
         public HomePage homePage;
-        public Simulation simulation;
+        public SimulationPage simulation;
+        public CalibrationPage calibration;
         PageOperations()
         {
             homePage = new HomePage();
-            simulation = new Simulation();
+            simulation = new SimulationPage();
+            calibration = new CalibrationPage();
         }
 
         public static PageOperations Instance
