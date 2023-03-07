@@ -15,7 +15,6 @@ namespace PLC.Services
             byte[] db4Buffer = new byte[12];
 
             var PlcResult = client.DBRead(4, 0, db4Buffer.Length, db4Buffer);
-            //Console.WriteLine(PlcResult.ToString());
 
             AssignDB4(dB4, db4Buffer);
 

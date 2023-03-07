@@ -12,6 +12,7 @@ namespace Presentation.View.Pages
     {
         PlcServices connection = PlcServices.Instance;
         private readonly IMinuteDataSendService minuteDataSendService = new MinuteDataSendService();
+        DateTime lastMinute;
 
         public HomePage()
         {
@@ -33,11 +34,11 @@ namespace Presentation.View.Pages
             var bgw = new BackgroundWorker();
             bgw.DoWork += delegate
             {
-                DateTime systemTime;
-
                 #region DB4 Okuma ve Label'lara atama (Sistem Saati)
                 //DB4
                 byte[] buffer4 = connection.ReadData(4, 0, 12);
+
+                DateTime systemTime;
 
                 if (buffer4 != null)
                 {
@@ -65,48 +66,54 @@ namespace Presentation.View.Pages
                     PanelInstantYikamaTanki.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.YikamaTanki);
                     PanelInstantEnerji.BackColor = ColorExtensions.FromBoolean(eBTagsDTO.Enerji);
                     #endregion
+
+
+                    #region DB41 Okuma/Atama
+                    //DB41
+                    byte[] buffer41 = connection.ReadData(41, 0, 248);
+
+                    if (buffer41 != null)
+                    {
+                        DB41DTO dB41 = connection.AssignDB41(buffer41);
+
+                        #region Değerlerin ekrana gösterimi
+                        LabelInstantAkm.Text = dB41.Akm + " mg/l";
+                        LabelInstantCozunmusOksijen.Text = dB41.CozunmusOksijen + " mg/l";
+                        LabelInstantSicaklik.Text = dB41.KabinSicaklik + "°C";
+                        LabelInstantPh.Text = dB41.Ph.ToString();
+                        LabelInstantIletkenlik.Text = dB41.Iletkenlik + " mS/cm";
+                        LabelInstantKoi.Text = dB41.Koi + " mg/l";
+                        LabelInstantDebi.Text = dB41.NumuneHiz + " m/s";
+                        LabelInstantAkisHizi.Text = dB41.TesisDebi + " m³/d";
+                        LabelInstantDesarjDebi.Text = dB41.DesarjDebi + " m³/d";
+                        LabelInstantHariciDebi.Text = dB41.HariciDebi + " m³/d";
+                        LabelInstantHariciDebi2.Text = dB41.HariciDebi2 + " m³/d";
+                        #endregion
+
+                        #region DB41 Sensörlerinin Durumlarını Gösteren Renklendirmeler
+                        //Coloring State Panels
+                        PanelInstantAkm.BackColor = ColorExtensions.FromDouble(dB41.Akm);
+                        PanelInstantCozunmusOksijen.BackColor = ColorExtensions.FromDouble(dB41.CozunmusOksijen);
+                        PanelInstantSicaklik.BackColor = ColorExtensions.FromDouble(dB41.KabinSicaklik);
+                        PanelInstantPh.BackColor = ColorExtensions.FromDouble(dB41.Ph);
+                        PanelInstantIletkenlik.BackColor = ColorExtensions.FromDouble(dB41.Iletkenlik);
+                        PanelInstantKoi.BackColor = ColorExtensions.FromDouble(dB41.Koi);
+                        PanelInstantDebi.BackColor = ColorExtensions.FromDouble(dB41.TesisDebi);
+                        PanelInstantAkisHizi.BackColor = ColorExtensions.FromDouble(dB41.NumuneHiz);
+                        PanelInstantDesarjDebi.BackColor = ColorExtensions.FromDouble(dB41.DesarjDebi);
+                        PanelInstantHariciDebi.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi);
+                        PanelInstantHariciDebi2.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi2);
+                        #endregion
+
+                        if (lastMinute.Minute != systemTime.Minute)
+                        {
+                            lastMinute = systemTime;
+                            minuteDataSendService.Add(dB41);
+                        }
+                    }
+                    #endregion
                 }
                 #endregion
-
-                #region DB41 Okuma/Atama
-                //DB41
-                byte[] buffer41 = connection.ReadData(41, 0, 248);
-
-                if (buffer41 != null)
-                {
-                    DB41DTO dB41 = connection.AssignDB41(buffer41);
-
-                    #region Değerlerin ekrana gösterimi
-                    LabelInstantAkm.Text = dB41.Akm + " mg/l";
-                    LabelInstantCozunmusOksijen.Text = dB41.CozunmusOksijen + " mg/l";
-                    LabelInstantSicaklik.Text = dB41.KabinSicaklik + "°C";
-                    LabelInstantPh.Text = dB41.Ph.ToString();
-                    LabelInstantIletkenlik.Text = dB41.Iletkenlik + " mS/cm";
-                    LabelInstantKoi.Text = dB41.Koi + " mg/l";
-                    LabelInstantDebi.Text = dB41.NumuneHiz + " m/s";
-                    LabelInstantAkisHizi.Text = dB41.TesisDebi + " m³/d";
-                    LabelInstantDesarjDebi.Text = dB41.DesarjDebi + " m³/d";
-                    LabelInstantHariciDebi.Text = dB41.HariciDebi + " m³/d";
-                    LabelInstantHariciDebi2.Text = dB41.HariciDebi2 + " m³/d";
-                    #endregion
-
-                    #region DB41 Sensörlerinin Durumlarını Gösteren Renklendirmeler
-                    //Coloring State Panels
-                    PanelInstantAkm.BackColor = ColorExtensions.FromDouble(dB41.Akm);
-                    PanelInstantCozunmusOksijen.BackColor = ColorExtensions.FromDouble(dB41.CozunmusOksijen);
-                    PanelInstantSicaklik.BackColor = ColorExtensions.FromDouble(dB41.KabinSicaklik);
-                    PanelInstantPh.BackColor = ColorExtensions.FromDouble(dB41.Ph);
-                    PanelInstantIletkenlik.BackColor = ColorExtensions.FromDouble(dB41.Iletkenlik);
-                    PanelInstantKoi.BackColor = ColorExtensions.FromDouble(dB41.Koi);
-                    PanelInstantDebi.BackColor = ColorExtensions.FromDouble(dB41.TesisDebi);
-                    PanelInstantAkisHizi.BackColor = ColorExtensions.FromDouble(dB41.NumuneHiz);
-                    PanelInstantDesarjDebi.BackColor = ColorExtensions.FromDouble(dB41.DesarjDebi);
-                    PanelInstantHariciDebi.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi);
-                    PanelInstantHariciDebi2.BackColor = ColorExtensions.FromDouble(dB41.HariciDebi2);
-                    #endregion
-                }
-                #endregion
-
             };
             bgw.RunWorkerAsync();
         }

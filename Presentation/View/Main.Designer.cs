@@ -182,6 +182,7 @@
             // ButtonSimulation
             // 
             this.ButtonSimulation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonSimulation.Enabled = false;
             this.ButtonSimulation.FlatAppearance.BorderSize = 0;
             this.ButtonSimulation.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ScrollBar;
             this.ButtonSimulation.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;

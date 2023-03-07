@@ -15,13 +15,13 @@ namespace Business.Services
     public class MinuteDataSendService : IMinuteDataSendService
     {
         IMinuteDataSendRepository MinuteDataSendRepository = new MinuteDataSendRepository();
-        public void Add(DB41DTO dB41DTO, DateTime systemTime)
+        public void Add(DB41DTO dB41DTO)
         {
-            var MinuteSendDataDTO = new MinuteDataSendDTO
+            var minuteSendDataDTO = new MinuteDataSendDTO
             {
                 Stationid = new Guid("75a6a184-06d9-4027-a506-0ed619588e18"),
                 SoftwareVersion = "1.0.0",
-                Readtime = systemTime,
+                Readtime = DateTime.Now,
                 Period = 1,
                 AkisHizi = dB41DTO.NumuneHiz,
                 AkisHiziStatus = 1,
@@ -46,6 +46,7 @@ namespace Business.Services
                 Iletkenlik = dB41DTO.Iletkenlik,
                 IletkenlikStatus = 1
             };
+            MinuteDataSendRepository.Add(minuteSendDataDTO);
         }
         public Array GetAll()
         {

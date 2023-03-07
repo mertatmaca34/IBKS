@@ -4,6 +4,7 @@ namespace Data_Access.Models
 {
     public class MinuteDataSendDTO
     {
+        public int Id { get; set; }
         public Guid? Stationid { get; set; }
         public DateTime? Readtime { get; set; }
         public string SoftwareVersion { get; set; }

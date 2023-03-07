@@ -11,6 +11,6 @@ namespace Business.Interfaces
     public interface IMinuteDataSendService
     {
         Array GetAll();
-        void Add(DB41DTO dB41DTO, DateTime systemTime);
+        void Add(DB41DTO dB41DTO);
     }
 }
