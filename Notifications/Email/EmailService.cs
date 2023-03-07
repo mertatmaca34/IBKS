@@ -15,11 +15,12 @@ namespace Notifications.Email
 
         public void MailSend(string mailName, string subject, string body)
         {
-            var bgw = new BackgroundWorker();
-            bgw.DoWork += delegate {
+            var backgroundWorker = new BackgroundWorker();
+            backgroundWorker.DoWork += delegate
+            {
                 try
                 {
-                    SmtpClient client = new SmtpClient
+                    SmtpClient smtpClient = new SmtpClient
                     {
                         EnableSsl = false,
                         Port = port,
@@ -28,16 +29,17 @@ namespace Notifications.Email
                         UseDefaultCredentials = false,
                         Credentials = new NetworkCredential(userName, password)
                     };
-                    MailMessage mm = new MailMessage
+                    MailMessage mailMessage = new MailMessage
                     {
-                        From = new MailAddress(userName)
+                        From = new MailAddress(userName),
+                        Subject = subject,
+                        Body = body,
+                        IsBodyHtml = true
                     };
-                    mm.To.Add(mailName);
-                    mm.Subject = subject;
-                    mm.IsBodyHtml = true;
-                    mm.Body = body;
 
-                    client.Send(mm);
+                    mailMessage.To.Add(mailName);
+
+                    smtpClient.Send(mailMessage);
 
                 }
                 catch (Exception)
@@ -45,7 +47,7 @@ namespace Notifications.Email
                     //TODO
                 }
             };
-            bgw.RunWorkerAsync();
+            backgroundWorker.RunWorkerAsync();
         }
     }
 }
