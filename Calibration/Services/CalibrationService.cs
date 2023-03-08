@@ -16,8 +16,6 @@ namespace Calibration.Services
     {
         readonly PlcServices connection = PlcServices.Instance;
         public bool isCalibrationInProgress;
-        DB4DTO dB4;
-        DB41DTO dB41;
         public CalibrationDTO StartCalibration(
             string calibrationName, string calibrationType, int calibrationTime, List<Control> controls)
         {
@@ -48,8 +46,6 @@ namespace Calibration.Services
 
             double tolerance = 0.10;
 
-            AssignPLCValues();
-
             List<double> measValues = new List<double>();
 
             Control labelTimeStamp = controls.FirstOrDefault(c => c.Name == "labelTimeRemain");
@@ -60,19 +56,19 @@ namespace Calibration.Services
             switch (calibrationName)
             {
                 case "AKM":
-                    calibrationDTO.ZeroMeas = dB41.Akm;
+                    calibrationDTO.ZeroMeas = connection.dB41DTO.Akm;
                     calibrationDTO.ZeroRef = 0;
                     break;
                 case "KOi":
-                    calibrationDTO.ZeroMeas = dB41.Koi;
+                    calibrationDTO.ZeroMeas = connection.dB41DTO.Koi;
                     calibrationDTO.ZeroRef = 0;
                     break;
                 case "Ph":
-                    calibrationDTO.ZeroMeas = dB41.Ph;
+                    calibrationDTO.ZeroMeas = connection.dB41DTO.Ph;
                     calibrationDTO.ZeroRef = 7;
                     break;
                 case "Iletkenlik":
-                    calibrationDTO.ZeroMeas = dB41.Iletkenlik;
+                    calibrationDTO.ZeroMeas = connection.dB41DTO.Iletkenlik;
                     calibrationDTO.ZeroRef = 0;
                     break;
                 default:
@@ -89,14 +85,15 @@ namespace Calibration.Services
 
             timerCalibration.Tick += delegate
             {
+                calibrationDTO.ZeroMeas = connection.dB41DTO.Iletkenlik;
 
                 //Kalibrasyon süresi 0 olduğunda bitecek
                 if (calibrationTime >= 0)
                 {
                     labelTimeStamp.Text = calibrationTime.ToString();
 
-                    (chartCalibrationSimulation as Chart).Series["Kalibrasyon Değeri"].Points.AddXY(dB4.SystemTime.ToString("hh:mm:ss"), calibrationDTO.ZeroMeas);
-                    (chartCalibrationSimulation as Chart).Series["Referans Değeri"].Points.AddXY(dB4.SystemTime.ToString("hh:mm:ss"), calibrationDTO.ZeroRef);
+                    (chartCalibrationSimulation as Chart).Series["Kalibrasyon Değeri"].Points.AddXY(connection.dB4DTO.SystemTime.ToString("hh:mm:ss"), calibrationDTO.ZeroMeas);
+                    (chartCalibrationSimulation as Chart).Series["Referans Değeri"].Points.AddXY(connection.dB4DTO.SystemTime.ToString("hh:mm:ss"), calibrationDTO.ZeroRef);
 
                     measValues.Add(calibrationDTO.ZeroMeas);
 
@@ -125,36 +122,6 @@ namespace Calibration.Services
 
         }
 
-        public void AssignPLCValues()
-        {
-            //PLC Okuma ve Atama işlemlerinin arkaplanda yapılması.
-            var bgw = new BackgroundWorker();
-            bgw.DoWork += delegate
-            {
-                //DB4
-                byte[] buffer4 = connection.ReadData(4, 0, 12);
-
-                if (buffer4 != null)
-                {
-                    dB4 = connection.AssignDB4(buffer4);
-
-                    //EB Tags
-                    byte[] bufferEBTags = connection.ReadData(0, 30);
-
-                    EBTagsDTO eBTagsDTO = connection.AssignEBTags(bufferEBTags);
-
-                    //DB41
-                    byte[] buffer41 = connection.ReadData(41, 0, 248);
-
-                    if (buffer41 != null)
-                    {
-                        dB41 = connection.AssignDB41(buffer41);
-                    }
-                }
-            };
-            bgw.RunWorkerAsync();
-        }
-
         public void CalculateCalibrationParameters(CalibrationDTO calibrationDTO, List<double> measValues, string calibrationType)
         {
             if (calibrationType == "Zero")
@@ -177,21 +144,28 @@ namespace Calibration.Services
             double mean = 0;
             double stdDev = 0;
 
-            // verilerin ortalaması hesaplanır
-            for (int i = 0; i < data.Count; i++)
+            if (!data.Any())
             {
-                sum += data[i];
-            }
-            mean = sum / data.Count;
+                // verilerin ortalaması hesaplanır
+                for (int i = 0; i < data.Count; i++)
+                {
+                    sum += data[i];
+                }
+                mean = sum / data.Count;
 
-            // standart sapma hesaplanır
-            for (int i = 0; i < data.Count; i++)
+                // standart sapma hesaplanır
+                for (int i = 0; i < data.Count; i++)
+                {
+                    stdDev += Math.Pow(data[i] - mean, 2);
+                }
+                stdDev = Math.Sqrt(stdDev / (data.Count - 1));
+
+                return stdDev;
+            }
+            else
             {
-                stdDev += Math.Pow(data[i] - mean, 2);
+                return stdDev;
             }
-            stdDev = Math.Sqrt(stdDev / (data.Count - 1));
-
-            return stdDev;
         }
         public void AssignLabels(List<Control> controls, CalibrationDTO calibrationDTO)
         {

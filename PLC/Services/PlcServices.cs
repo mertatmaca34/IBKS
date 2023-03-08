@@ -1,7 +1,7 @@
 ﻿using PLC.Models;
 using PLC.Utils;
 using Sharp7;
-
+using System;
 
 namespace Presentation
 {
@@ -10,9 +10,31 @@ namespace Presentation
         private static PlcServices instance = null;
         private static readonly object padlock = new object();
         private readonly S7Client client;
+
+        public DB41DTO dB41DTO;
+        public DB4DTO dB4DTO;
+        public EBTagsDTO eBTagsDTO;
         PlcServices()
         {
             client = new S7Client();
+
+            System.Windows.Forms.Timer plcTimer = new System.Windows.Forms.Timer
+            {
+                Enabled = true,
+                Interval = 1000,
+            };
+            plcTimer.Tick += new EventHandler(plcTimer_Tick);
+        }
+
+        private void plcTimer_Tick(object sender, EventArgs e)
+        {
+            byte[] buffer4 = ReadData(4, 0, 12);
+            byte[] bufferEBTags = ReadData(0, 30);
+            byte[] buffer41 = ReadData(41, 0, 248);
+
+            AssignDB4(buffer4);
+            AssignDB41(buffer41);
+            AssignEBTags(bufferEBTags);
         }
 
         public static PlcServices Instance
@@ -75,7 +97,7 @@ namespace Presentation
 
         public DB41DTO AssignDB41(byte[] buffer)
         {
-            DB41DTO dB41 = new DB41DTO
+            dB41DTO = new DB41DTO
             {
                 TesisDebi = Get.Real(buffer, 0, 60),
                 TesisGünlükDebi = Get.Real(buffer, 12, 60),
@@ -101,22 +123,22 @@ namespace Presentation
                 UpsYuk = Get.Real(buffer, 164)
             };
 
-            return dB41;
+            return dB41DTO;
         }
 
         public DB4DTO AssignDB4(byte[] buffer)
         {
-            DB4DTO dB4 = new DB4DTO
+            dB4DTO = new DB4DTO
             {
                 SystemTime = Get.Time(buffer, 0)
             };
 
-            return dB4;
+            return dB4DTO;
         }
 
         public EBTagsDTO AssignEBTags(byte[] buffer)
         {
-            EBTagsDTO eBTagsDTO = new EBTagsDTO
+            eBTagsDTO = new EBTagsDTO
             {
                 Kapi = Get.Bit(buffer, 25, 5),
                 Duman = Get.Bit(buffer, 1, 1),
