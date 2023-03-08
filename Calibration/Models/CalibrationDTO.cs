@@ -16,5 +16,6 @@ namespace Calibration.Models
         public double SpanDiff { get; set; }
         public double SpanStd { get; set; }
         public double ResultFactor { get; set; }
+        public bool IsItValid { get; set; }
     }
 }
