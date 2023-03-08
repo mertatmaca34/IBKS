@@ -1,9 +1,6 @@
 ﻿using PLC.Models;
 using PLC.Utils;
 using Sharp7;
-using System;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 
 namespace Presentation

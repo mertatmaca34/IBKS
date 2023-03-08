@@ -34,7 +34,7 @@ namespace Presentation.View.Pages
             var bgw = new BackgroundWorker();
             bgw.DoWork += delegate
             {
-                #region DB4 Okuma ve Label'lara atama (Sistem Saati)
+                #region DB Okuma ve Label'lara atama (Sistem Saati)
                 //DB4
                 byte[] buffer4 = connection.ReadData(4, 0, 12);
 
