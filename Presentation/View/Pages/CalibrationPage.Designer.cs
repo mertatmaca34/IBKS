@@ -95,7 +95,7 @@
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartCalibrationSimulation = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -141,6 +141,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
+            this.label36 = new System.Windows.Forms.Label();
             this.tableLayoutPanel76.SuspendLayout();
             this.tableLayoutPanel77.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -165,7 +166,7 @@
             this.tableLayoutPanel27.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCalibrationSimulation)).BeginInit();
             this.tableLayoutPanel19.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel30.SuspendLayout();
@@ -1032,9 +1033,9 @@
             this.label14.TabIndex = 53;
             this.label14.Text = "Kalibrasyon Simülasyonu";
             // 
-            // chart1
+            // chartCalibrationSimulation
             // 
-            this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chartCalibrationSimulation.Anchor = System.Windows.Forms.AnchorStyles.None;
             chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
             chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
             chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
@@ -1068,13 +1069,13 @@
             chartArea1.InnerPlotPosition.X = 5F;
             chartArea1.InnerPlotPosition.Y = 2F;
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartCalibrationSimulation.ChartAreas.Add(chartArea1);
             legend1.BackColor = System.Drawing.Color.WhiteSmoke;
             legend1.ItemColumnSpacing = 0;
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(11, 318);
-            this.chart1.Name = "chart1";
+            this.chartCalibrationSimulation.Legends.Add(legend1);
+            this.chartCalibrationSimulation.Location = new System.Drawing.Point(11, 318);
+            this.chartCalibrationSimulation.Name = "chartCalibrationSimulation";
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -1083,7 +1084,7 @@
             series1.Legend = "Legend1";
             series1.MarkerSize = 8;
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Kalibrasyon Adı";
+            series1.Name = "Kalibrasyon Değeri";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             series2.BorderWidth = 2;
@@ -1094,13 +1095,13 @@
             series2.Name = "Referans Çizgisi";
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(1166, 358);
-            this.chart1.TabIndex = 54;
-            this.chart1.Text = "chart1";
+            this.chartCalibrationSimulation.Series.Add(series1);
+            this.chartCalibrationSimulation.Series.Add(series2);
+            this.chartCalibrationSimulation.Size = new System.Drawing.Size(1166, 358);
+            this.chartCalibrationSimulation.TabIndex = 54;
+            this.chartCalibrationSimulation.Text = "chart1";
             title1.Name = "Kalibrasyon Grafiği";
-            this.chart1.Titles.Add(title1);
+            this.chartCalibrationSimulation.Titles.Add(title1);
             // 
             // tableLayoutPanel19
             // 
@@ -1732,15 +1733,27 @@
             this.tableLayoutPanel36.Size = new System.Drawing.Size(72, 72);
             this.tableLayoutPanel36.TabIndex = 57;
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.White;
+            this.label36.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label36.Location = new System.Drawing.Point(983, 287);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(94, 18);
+            this.label36.TabIndex = 53;
+            this.label36.Text = "Kalan Süre: ";
+            // 
             // CalibrationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 688);
             this.Controls.Add(this.tableLayoutPanel36);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chartCalibrationSimulation);
             this.Controls.Add(this.tableLayoutPanel76);
             this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label1);
@@ -1787,7 +1800,7 @@
             this.tableLayoutPanel27.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCalibrationSimulation)).EndInit();
             this.tableLayoutPanel19.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel30.ResumeLayout(false);
@@ -1883,7 +1896,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartCalibrationSimulation;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.Panel panel5;
@@ -1929,5 +1942,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel36;
+        private System.Windows.Forms.Label label36;
     }
 }
