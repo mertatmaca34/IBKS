@@ -67,7 +67,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAKMZero = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -105,7 +105,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
-            this.label22 = new System.Windows.Forms.Label();
+            this.labelZeroRef = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
             this.label28 = new System.Windows.Forms.Label();
@@ -141,7 +141,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
-            this.label36 = new System.Windows.Forms.Label();
+            this.labelTimeRemain = new System.Windows.Forms.Label();
             this.tableLayoutPanel76.SuspendLayout();
             this.tableLayoutPanel77.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -652,7 +652,7 @@
             // 
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.777778F));
-            this.tableLayoutPanel8.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.buttonAKMZero, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(388, 0);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -662,21 +662,22 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(181, 47);
             this.tableLayoutPanel8.TabIndex = 55;
             // 
-            // button1
+            // buttonAKMZero
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 47);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Zero";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonAKMZero.BackColor = System.Drawing.Color.White;
+            this.buttonAKMZero.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAKMZero.FlatAppearance.BorderSize = 0;
+            this.buttonAKMZero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAKMZero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.buttonAKMZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAKMZero.Location = new System.Drawing.Point(0, 0);
+            this.buttonAKMZero.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAKMZero.Name = "buttonAKMZero";
+            this.buttonAKMZero.Size = new System.Drawing.Size(181, 47);
+            this.buttonAKMZero.TabIndex = 54;
+            this.buttonAKMZero.Text = "Zero";
+            this.buttonAKMZero.UseVisualStyleBackColor = false;
+            this.buttonAKMZero.Click += new System.EventHandler(this.buttonAKMZero_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -1092,7 +1093,7 @@
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series2.Color = System.Drawing.Color.Blue;
             series2.Legend = "Legend1";
-            series2.Name = "Referans Çizgisi";
+            series2.Name = "Referans Değeri";
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chartCalibrationSimulation.Series.Add(series1);
@@ -1228,18 +1229,18 @@
             this.tableLayoutPanel32.Size = new System.Drawing.Size(134, 27);
             this.tableLayoutPanel32.TabIndex = 57;
             // 
-            // label22
+            // labelZeroRef
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.White;
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(70, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(61, 27);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "-";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelZeroRef.AutoSize = true;
+            this.labelZeroRef.BackColor = System.Drawing.Color.White;
+            this.labelZeroRef.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelZeroRef.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelZeroRef.Location = new System.Drawing.Point(70, 0);
+            this.labelZeroRef.Name = "labelZeroRef";
+            this.labelZeroRef.Size = new System.Drawing.Size(61, 27);
+            this.labelZeroRef.TabIndex = 2;
+            this.labelZeroRef.Text = "-";
+            this.labelZeroRef.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label23
             // 
@@ -1330,7 +1331,7 @@
             this.tableLayoutPanel33.ColumnCount = 2;
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel33.Controls.Add(this.label22, 1, 0);
+            this.tableLayoutPanel33.Controls.Add(this.labelZeroRef, 1, 0);
             this.tableLayoutPanel33.Controls.Add(this.label23, 0, 0);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel33.Location = new System.Drawing.Point(0, 0);
@@ -1733,16 +1734,16 @@
             this.tableLayoutPanel36.Size = new System.Drawing.Size(72, 72);
             this.tableLayoutPanel36.TabIndex = 57;
             // 
-            // label36
+            // labelTimeRemain
             // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.White;
-            this.label36.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label36.Location = new System.Drawing.Point(983, 287);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(94, 18);
-            this.label36.TabIndex = 53;
-            this.label36.Text = "Kalan Süre: ";
+            this.labelTimeRemain.AutoSize = true;
+            this.labelTimeRemain.BackColor = System.Drawing.Color.White;
+            this.labelTimeRemain.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTimeRemain.Location = new System.Drawing.Point(983, 287);
+            this.labelTimeRemain.Name = "labelTimeRemain";
+            this.labelTimeRemain.Size = new System.Drawing.Size(94, 18);
+            this.labelTimeRemain.TabIndex = 53;
+            this.labelTimeRemain.Text = "Kalan Süre: ";
             // 
             // CalibrationPage
             // 
@@ -1753,7 +1754,7 @@
             this.Controls.Add(this.chartCalibrationSimulation);
             this.Controls.Add(this.tableLayoutPanel76);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.label36);
+            this.Controls.Add(this.labelTimeRemain);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label1);
@@ -1874,7 +1875,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAKMZero;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -1906,7 +1907,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
         private System.Windows.Forms.Label label28;
@@ -1942,6 +1942,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel36;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label labelTimeRemain;
+        public System.Windows.Forms.Label labelZeroRef;
     }
 }

@@ -360,6 +360,10 @@
       <Project>{13fc3cb6-0be2-4230-b2d2-02235cb5377c}</Project>
       <Name>Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Calibration\Calibration.csproj">
+      <Project>{f1e85617-4a53-45a1-bb3b-37de1183ddfb}</Project>
+      <Name>Calibration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAcces.csproj">
       <Project>{830C0FA0-3558-42BA-A0EB-489CCB7B9CE0}</Project>
       <Name>DataAcces</Name>
