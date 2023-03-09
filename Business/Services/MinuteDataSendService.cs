@@ -9,7 +9,7 @@ namespace Business.Services
 {
     public class MinuteDataSendService : IMinuteDataSendService
     {
-        readonly IMinuteDataSendRepository MinuteDataSendRepository = new MinuteDataSendRepository();
+        readonly IMinuteDataSendRepository minuteDataSendRepository = new MinuteDataSendRepository();
         public void Add(DB41DTO dB41DTO)
         {
             var minuteSendDataDTO = new MinuteDataSendDTO
@@ -41,11 +41,11 @@ namespace Business.Services
                 Iletkenlik = dB41DTO.Iletkenlik,
                 IletkenlikStatus = 1
             };
-            MinuteDataSendRepository.Add(minuteSendDataDTO);
+            minuteDataSendRepository.Add(minuteSendDataDTO);
         }
         public Array GetAll()
         {
-            var minuteDataSendDTOs = MinuteDataSendRepository.GetAll();
+            var minuteDataSendDTOs = minuteDataSendRepository.GetAll();
 
             return minuteDataSendDTOs.ToArray();
         }

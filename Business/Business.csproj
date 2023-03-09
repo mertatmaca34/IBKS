@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ICalibrationDTOService.cs" />
     <Compile Include="Interfaces\IMinuteDataSendService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CalibrationDTOService.cs" />
     <Compile Include="Services\MinuteDataSendService.cs" />
   </ItemGroup>
   <ItemGroup>

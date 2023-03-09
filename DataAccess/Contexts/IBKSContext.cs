@@ -1,4 +1,5 @@
 ﻿using Data_Access.Models;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,5 +12,6 @@ namespace Data_Access.Contexts
     public class IBKSContext: DbContext
     {
         public DbSet<MinuteDataSendDTO> minuteDataSendDTOs { get; set; }
+        public DbSet<CalibrationDTO> CalibrationDTOs { get; set; }
     }
 }

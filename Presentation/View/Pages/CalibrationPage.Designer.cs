@@ -36,7 +36,7 @@
             this.tableLayoutPanel76 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel77 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonKoiZero = new System.Windows.Forms.Button();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -99,7 +99,7 @@
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.labelActiveCalibration = new System.Windows.Forms.Label();
             this.tableLayoutPanel30 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
@@ -229,7 +229,7 @@
             // 
             this.tableLayoutPanel15.ColumnCount = 1;
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.777778F));
-            this.tableLayoutPanel15.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.buttonKoiZero, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(388, 0);
             this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
@@ -239,21 +239,22 @@
             this.tableLayoutPanel15.Size = new System.Drawing.Size(181, 47);
             this.tableLayoutPanel15.TabIndex = 56;
             // 
-            // button6
+            // buttonKoiZero
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(181, 47);
-            this.button6.TabIndex = 54;
-            this.button6.Text = "Zero";
-            this.button6.UseVisualStyleBackColor = false;
+            this.buttonKoiZero.BackColor = System.Drawing.Color.White;
+            this.buttonKoiZero.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonKoiZero.FlatAppearance.BorderSize = 0;
+            this.buttonKoiZero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonKoiZero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.buttonKoiZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKoiZero.Location = new System.Drawing.Point(0, 0);
+            this.buttonKoiZero.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonKoiZero.Name = "buttonKoiZero";
+            this.buttonKoiZero.Size = new System.Drawing.Size(181, 47);
+            this.buttonKoiZero.TabIndex = 54;
+            this.buttonKoiZero.Text = "Zero";
+            this.buttonKoiZero.UseVisualStyleBackColor = false;
+            this.buttonKoiZero.Click += new System.EventHandler(this.buttonKoiZero_Click);
             // 
             // tableLayoutPanel11
             // 
@@ -1144,16 +1145,16 @@
             this.panel5.Size = new System.Drawing.Size(8, 30);
             this.panel5.TabIndex = 2;
             // 
-            // label15
+            // labelActiveCalibration
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(632, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(139, 18);
-            this.label15.TabIndex = 53;
-            this.label15.Text = "Aktif Kalibrasyon: -";
+            this.labelActiveCalibration.AutoSize = true;
+            this.labelActiveCalibration.BackColor = System.Drawing.Color.White;
+            this.labelActiveCalibration.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelActiveCalibration.Location = new System.Drawing.Point(632, 20);
+            this.labelActiveCalibration.Name = "labelActiveCalibration";
+            this.labelActiveCalibration.Size = new System.Drawing.Size(139, 18);
+            this.labelActiveCalibration.TabIndex = 53;
+            this.labelActiveCalibration.Text = "Aktif Kalibrasyon: -";
             // 
             // tableLayoutPanel30
             // 
@@ -1758,7 +1759,7 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.labelTimeRemain);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.labelActiveCalibration);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel17);
             this.Controls.Add(this.tableLayoutPanel19);
@@ -1885,7 +1886,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonKoiZero;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonPhZero;
@@ -1903,7 +1904,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label labelActiveCalibration;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel30;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel31;
         private System.Windows.Forms.Panel panel12;

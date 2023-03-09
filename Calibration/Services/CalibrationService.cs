@@ -1,12 +1,11 @@
-﻿using Calibration.Models;
-using PLC.Models;
+﻿using Business.Interfaces;
+using Business.Services;
+using DataAccess.Models;
 using Presentation;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -14,12 +13,15 @@ namespace Calibration.Services
 {
     public class CalibrationService
     {
-        readonly PlcServices connection = PlcServices.Instance;
+        private readonly ICalibrationDTOService calibrationDTOService = new CalibrationDTOService();
+        private readonly PlcServices connection = PlcServices.Instance;
         public bool isCalibrationInProgress;
-        public CalibrationDTO StartCalibration(
+        CalibrationDTO calibrationDTO = new CalibrationDTO();
+        readonly double tolerance = 0.10;
+
+        public void StartCalibration(
             string calibrationName, string calibrationType, int calibrationTime, List<Control> controls)
         {
-            CalibrationDTO calibrationDTO = new CalibrationDTO();
             if (!isCalibrationInProgress)
             {
                 if (calibrationType == "Zero")
@@ -29,47 +31,52 @@ namespace Calibration.Services
                 }
                 else
                 {
-                    StartSpanCalibration(calibrationTime);
+                    isCalibrationInProgress = true;
+                    StartSpanCalibration(calibrationName, calibrationTime, controls);
                 }
-
             }
             else
             {
+                return;
                 //TODO
             }
-            return calibrationDTO;
         }
 
         public void StartZeroCalibration(string calibrationName, int calibrationTime, List<Control> controls)
         {
-            CalibrationDTO calibrationDTO = new CalibrationDTO();
-
-            double tolerance = 0.10;
-
             List<double> measValues = new List<double>();
 
             Control labelTimeStamp = controls.FirstOrDefault(c => c.Name == "labelTimeRemain");
             Control chartCalibrationSimulation = controls.FirstOrDefault(c => c.Name == "chartCalibrationSimulation");
+            Control labelActiveCalibration = controls.FirstOrDefault(c => c.Name == "labelActiveCalibration");
 
-            Thread.Sleep(2000);
+            calibrationDTO.TimeStamp = connection.dB4DTO.SystemTime;
 
             switch (calibrationName)
             {
                 case "AKM":
                     calibrationDTO.ZeroMeas = connection.dB41DTO.Akm;
                     calibrationDTO.ZeroRef = 0;
+                    calibrationDTO.Parameter = "AKM";
+                    labelActiveCalibration.Text = "Aktif Kalibrasyon: AKM";
                     break;
                 case "KOi":
                     calibrationDTO.ZeroMeas = connection.dB41DTO.Koi;
                     calibrationDTO.ZeroRef = 0;
+                    calibrationDTO.Parameter = "KOi";
+                    labelActiveCalibration.Text = "Aktif Kalibrasyon: KOi";
                     break;
                 case "Ph":
                     calibrationDTO.ZeroMeas = connection.dB41DTO.Ph;
                     calibrationDTO.ZeroRef = 7;
+                    calibrationDTO.Parameter = "Ph";
+                    labelActiveCalibration.Text = "Aktif Kalibrasyon: pH";
                     break;
                 case "Iletkenlik":
                     calibrationDTO.ZeroMeas = connection.dB41DTO.Iletkenlik;
                     calibrationDTO.ZeroRef = 0;
+                    calibrationDTO.Parameter = "Iletkenlik";
+                    labelActiveCalibration.Text = "Aktif Kalibrasyon: İletkenlik";
                     break;
                 default:
                     calibrationDTO.ZeroMeas = 0;
@@ -77,7 +84,7 @@ namespace Calibration.Services
                     break;
             }
 
-            System.Windows.Forms.Timer timerCalibration = new System.Windows.Forms.Timer
+            Timer timerCalibration = new Timer
             {
                 Interval = 1000,
                 Enabled = true
@@ -97,8 +104,96 @@ namespace Calibration.Services
 
                     measValues.Add(calibrationDTO.ZeroMeas);
 
-                    CalculateCalibrationParameters(calibrationDTO, measValues, "Zero");
-                    AssignLabels(controls, calibrationDTO);
+                    CalculateCalibrationParameters(measValues, "Zero");
+                    AssignLabels(controls);
+
+                    if (calibrationDTO.ZeroMeas >= calibrationDTO.ZeroRef / tolerance && calibrationDTO.ZeroMeas <= calibrationDTO.ZeroRef * tolerance)
+                    {
+                        (chartCalibrationSimulation as Chart).Series["Kalibrasyon Değeri"].Color = Color.Lime;
+                    }
+                    else
+                    {
+                        (chartCalibrationSimulation as Chart).Series["Kalibrasyon Değeri"].Color = Color.Red;
+                    }
+                    calibrationTime--;
+                }
+                else
+                {
+                    timerCalibration.Enabled = false;
+
+                    isCalibrationInProgress = false;
+
+                    //TODO Kalibrasyon sonucunu gönder
+
+                    (chartCalibrationSimulation as Chart).Series["Kalibrasyon Değeri"].Points.Clear();
+                    (chartCalibrationSimulation as Chart).Series["Referans Değeri"].Points.Clear();
+                    labelTimeStamp.Text = "Kalan Süre:";
+                    labelActiveCalibration.Text = "Aktif Kalibrasyon: -";
+
+                    //Kalibrasyonu kaydet
+                    calibrationDTOService.Add(calibrationDTO);
+
+                    //Nesneyi resetle
+                    calibrationDTO = new CalibrationDTO();
+
+                    //Label'lardaki değerleri resetle
+                    AssignLabels(controls);
+                }
+            };
+
+        }
+
+        public void StartSpanCalibration(string calibrationName, int calibrationTime, List<Control> controls)
+        {
+            List<double> measValues = new List<double>();
+
+            Control labelTimeStamp = controls.FirstOrDefault(c => c.Name == "labelTimeRemain");
+            Control chartCalibrationSimulation = controls.FirstOrDefault(c => c.Name == "chartCalibrationSimulation");
+
+            switch (calibrationName)
+            {
+                case "Ph":
+                    calibrationDTO.ZeroMeas = calibrationDTO.ZeroMeas;
+                    calibrationDTO.ZeroRef = 7;
+                    calibrationDTO.SpanMeas = connection.dB41DTO.Ph;
+                    calibrationDTO.SpanRef = 10;
+                    break;
+                case "Iletkenlik":
+                    calibrationDTO.ZeroMeas = calibrationDTO.ZeroMeas;
+                    calibrationDTO.ZeroRef = 0;
+                    calibrationDTO.SpanMeas = connection.dB41DTO.Iletkenlik;
+                    calibrationDTO.SpanRef = 1413;
+                    break;
+                default:
+                    calibrationDTO.ZeroMeas = 0;
+                    calibrationDTO.ZeroRef = 0;
+                    calibrationDTO.SpanMeas = 0;
+                    calibrationDTO.SpanRef = 0;
+                    break;
+            }
+
+            Timer timerCalibration = new Timer
+            {
+                Interval = 1000,
+                Enabled = true
+            };
+
+            timerCalibration.Tick += delegate
+            {
+                calibrationDTO.ZeroMeas = connection.dB41DTO.Iletkenlik;
+
+                //Kalibrasyon süresi 0 olduğunda bitecek
+                if (calibrationTime >= 0)
+                {
+                    labelTimeStamp.Text = calibrationTime.ToString();
+
+                    (chartCalibrationSimulation as Chart).Series["Kalibrasyon Değeri"].Points.AddXY(connection.dB4DTO.SystemTime.ToString("hh:mm:ss"), calibrationDTO.ZeroMeas);
+                    (chartCalibrationSimulation as Chart).Series["Referans Değeri"].Points.AddXY(connection.dB4DTO.SystemTime.ToString("hh:mm:ss"), calibrationDTO.ZeroRef);
+
+                    measValues.Add(calibrationDTO.ZeroMeas);
+
+                    CalculateCalibrationParameters(measValues, "Zero");
+                    AssignLabels(controls);
 
                     if (calibrationDTO.ZeroMeas >= calibrationDTO.ZeroRef / tolerance && calibrationDTO.ZeroMeas <= calibrationDTO.ZeroRef * tolerance)
                     {
@@ -115,19 +210,15 @@ namespace Calibration.Services
                     timerCalibration.Enabled = false;
                 }
             };
+            isCalibrationInProgress = false;
         }
 
-        public void StartSpanCalibration(int calibrationTime)
-        {
-
-        }
-
-        public void CalculateCalibrationParameters(CalibrationDTO calibrationDTO, List<double> measValues, string calibrationType)
+        public void CalculateCalibrationParameters(List<double> measValues, string calibrationType)
         {
             if (calibrationType == "Zero")
             {
-                calibrationDTO.ZeroDiff = Math.Round(calibrationDTO.ZeroMeas - calibrationDTO.ZeroRef,2);
-                calibrationDTO.ZeroStd = Math.Round(CalculateStandardDeviation(measValues),2);
+                calibrationDTO.ZeroDiff = Math.Round(calibrationDTO.ZeroMeas - calibrationDTO.ZeroRef, 2);
+                calibrationDTO.ZeroStd = Math.Round(CalculateStandardDeviation(measValues), 2);
                 calibrationDTO.ResultFactor = Math.Round((calibrationDTO.ZeroMeas - calibrationDTO.ZeroRef) / calibrationDTO.ZeroDiff, 2);
             }
             else
@@ -141,7 +232,7 @@ namespace Calibration.Services
         public double CalculateStandardDeviation(List<double> data)
         {
             double sum = 0;
-            double mean = 0;
+            double mean;
             double stdDev = 0;
 
             if (!data.Any())
@@ -167,17 +258,18 @@ namespace Calibration.Services
                 return stdDev;
             }
         }
-        public void AssignLabels(List<Control> controls, CalibrationDTO calibrationDTO)
+        public void AssignLabels(List<Control> controls)
         {
-            Control labelZeroRef = controls.Where(c => c.Name == "labelZeroRef").FirstOrDefault();
-            Control labelZeroMeas = controls.Where(c => c.Name == "labelZeroMeas").FirstOrDefault();
-            Control labelZeroDiff = controls.Where(c => c.Name == "labelZeroDiff").FirstOrDefault();
-            Control labelZeroStd = controls.Where(c => c.Name == "labelZeroStd").FirstOrDefault();
-            Control labelSpanRef = controls.Where(c => c.Name == "labelSpanRef").FirstOrDefault();
-            Control labelSpanMeas = controls.Where(c => c.Name == "labelSpanMeas").FirstOrDefault();
-            Control labelSpanDiff = controls.Where(c => c.Name == "labelSpanDiff").FirstOrDefault();
-            Control labelSpanStd = controls.Where(c => c.Name == "labelSpanStd").FirstOrDefault();
-            Control labelResultFactor = controls.Where(c => c.Name == "labelResultFactor").FirstOrDefault();
+            Control labelZeroRef = controls.FirstOrDefault(c => c.Name == "labelZeroRef");
+            Control labelZeroMeas = controls.FirstOrDefault(c => c.Name == "labelZeroMeas");
+            Control labelZeroDiff = controls.FirstOrDefault(c => c.Name == "labelZeroDiff");
+            Control labelZeroStd = controls.FirstOrDefault(c => c.Name == "labelZeroStd");
+            Control labelSpanRef = controls.FirstOrDefault(c => c.Name == "labelSpanRef");
+            Control labelSpanMeas = controls.FirstOrDefault(c => c.Name == "labelSpanMeas");
+            Control labelSpanDiff = controls.FirstOrDefault(c => c.Name == "labelSpanDiff");
+            Control labelSpanStd = controls.FirstOrDefault(c => c.Name == "labelSpanStd");
+            Control labelResultFactor = controls.FirstOrDefault(c => c.Name == "labelResultFactor");
+            Control labelActiveCalibration = controls.FirstOrDefault(c => c.Name == "labelActiveCalibration");
 
             labelZeroRef.Text = calibrationDTO.ZeroRef.ToString();
             labelZeroMeas.Text = calibrationDTO.ZeroMeas.ToString();
@@ -186,8 +278,8 @@ namespace Calibration.Services
             labelSpanRef.Text = calibrationDTO.SpanRef.ToString();
             labelSpanMeas.Text = calibrationDTO.SpanMeas.ToString();
             labelSpanDiff.Text = calibrationDTO.SpanDiff.ToString();
-            labelSpanStd.Text = calibrationDTO?.SpanStd.ToString();
-            labelResultFactor.Text = calibrationDTO?.ResultFactor.ToString();
+            labelSpanStd.Text = calibrationDTO.SpanStd.ToString();
+            labelResultFactor.Text = calibrationDTO.ResultFactor.ToString();
         }
     }
 }

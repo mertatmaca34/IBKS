@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CalibrationDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CalibrationService.cs" />
   </ItemGroup>
@@ -53,6 +52,14 @@
     <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{13fc3cb6-0be2-4230-b2d2-02235cb5377c}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAcces.csproj">
+      <Project>{830c0fa0-3558-42ba-a0eb-489ccb7b9ce0}</Project>
+      <Name>DataAcces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PLC\PLC.csproj">
       <Project>{750656c5-5306-4a37-9e25-fe0f06d46b33}</Project>
       <Name>PLC</Name>

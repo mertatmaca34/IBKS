@@ -8,6 +8,8 @@ namespace Presentation.View.Pages
 
     public partial class CalibrationPage : Form
     {
+        CalibrationService calibrationService = new CalibrationService();
+
         readonly List<Control> calibrationControls;
         public CalibrationPage()
         {
@@ -25,26 +27,29 @@ namespace Presentation.View.Pages
                 labelSpanMeas,
                 labelSpanDiff,
                 labelSpanStd,
-                labelResultFactor
+                labelResultFactor,
+                labelActiveCalibration
             };
         }
 
         private void buttonAKMZero_Click(object sender, EventArgs e)
         {
-            CalibrationService calibrationService = new CalibrationService();
             calibrationService.StartCalibration("AKM", "Zero", 10, calibrationControls);
         }
 
         private void buttonPhZero_Click(object sender, EventArgs e)
         {
-            CalibrationService calibrationService = new CalibrationService();
             calibrationService.StartCalibration("Ph", "Zero", 30, calibrationControls);
         }
 
         private void buttonIletkenlikZero_Click(object sender, EventArgs e)
         {
-            CalibrationService calibrationService = new CalibrationService();
             calibrationService.StartCalibration("Iletkenlik", "Zero", 30, calibrationControls);
+        }
+
+        private void buttonKoiZero_Click(object sender, EventArgs e)
+        {
+            calibrationService.StartCalibration("Koi", "Zero", 10, calibrationControls);
         }
     }
 }
