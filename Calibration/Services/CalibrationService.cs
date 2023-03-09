@@ -140,7 +140,6 @@ namespace Calibration.Services
                     AssignLabels(controls);
                 }
             };
-
         }
 
         public void StartSpanCalibration(string calibrationName, int calibrationTime, List<Control> controls)

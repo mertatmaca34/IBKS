@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tableLayoutPanel76 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel77 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -40,7 +40,7 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.PanelInstantCozunmusOksijen = new System.Windows.Forms.Panel();
+            this.PanelCalibrationKoi = new System.Windows.Forms.Panel();
             this.tableLayoutPanel78 = new System.Windows.Forms.TableLayoutPanel();
             this.label78 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonPhZero = new System.Windows.Forms.Button();
-            this.PanelInstantSicaklik = new System.Windows.Forms.Panel();
+            this.PanelCalibrationPh = new System.Windows.Forms.Panel();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.PanelInstantAkm = new System.Windows.Forms.Panel();
+            this.PanelCalibrationAkm = new System.Windows.Forms.Panel();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonIletkenlikZero = new System.Windows.Forms.Button();
-            this.PanelInstantPh = new System.Windows.Forms.Panel();
+            this.PanelCalibrationIletkenlik = new System.Windows.Forms.Panel();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -212,7 +212,7 @@
             this.tableLayoutPanel77.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel77.Controls.Add(this.tableLayoutPanel15, 5, 0);
             this.tableLayoutPanel77.Controls.Add(this.tableLayoutPanel11, 3, 0);
-            this.tableLayoutPanel77.Controls.Add(this.PanelInstantCozunmusOksijen, 0, 0);
+            this.tableLayoutPanel77.Controls.Add(this.PanelCalibrationKoi, 0, 0);
             this.tableLayoutPanel77.Controls.Add(this.tableLayoutPanel78, 1, 0);
             this.tableLayoutPanel77.Controls.Add(this.panel44, 2, 0);
             this.tableLayoutPanel77.Controls.Add(this.panel45, 4, 0);
@@ -296,15 +296,15 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Son Kalibrasyon";
             // 
-            // PanelInstantCozunmusOksijen
+            // PanelCalibrationKoi
             // 
-            this.PanelInstantCozunmusOksijen.BackColor = System.Drawing.Color.Gray;
-            this.PanelInstantCozunmusOksijen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelInstantCozunmusOksijen.Location = new System.Drawing.Point(0, 0);
-            this.PanelInstantCozunmusOksijen.Margin = new System.Windows.Forms.Padding(0);
-            this.PanelInstantCozunmusOksijen.Name = "PanelInstantCozunmusOksijen";
-            this.PanelInstantCozunmusOksijen.Size = new System.Drawing.Size(8, 47);
-            this.PanelInstantCozunmusOksijen.TabIndex = 3;
+            this.PanelCalibrationKoi.BackColor = System.Drawing.Color.Gray;
+            this.PanelCalibrationKoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCalibrationKoi.Location = new System.Drawing.Point(0, 0);
+            this.PanelCalibrationKoi.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelCalibrationKoi.Name = "PanelCalibrationKoi";
+            this.PanelCalibrationKoi.Size = new System.Drawing.Size(8, 47);
+            this.PanelCalibrationKoi.TabIndex = 3;
             // 
             // tableLayoutPanel78
             // 
@@ -391,7 +391,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel16, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel14, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.PanelInstantSicaklik, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.PanelCalibrationPh, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel26, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel4, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel46, 4, 0);
@@ -493,15 +493,15 @@
             this.buttonPhZero.UseVisualStyleBackColor = false;
             this.buttonPhZero.Click += new System.EventHandler(this.buttonPhZero_Click);
             // 
-            // PanelInstantSicaklik
+            // PanelCalibrationPh
             // 
-            this.PanelInstantSicaklik.BackColor = System.Drawing.Color.Gray;
-            this.PanelInstantSicaklik.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelInstantSicaklik.Location = new System.Drawing.Point(0, 0);
-            this.PanelInstantSicaklik.Margin = new System.Windows.Forms.Padding(0);
-            this.PanelInstantSicaklik.Name = "PanelInstantSicaklik";
-            this.PanelInstantSicaklik.Size = new System.Drawing.Size(8, 47);
-            this.PanelInstantSicaklik.TabIndex = 3;
+            this.PanelCalibrationPh.BackColor = System.Drawing.Color.Gray;
+            this.PanelCalibrationPh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCalibrationPh.Location = new System.Drawing.Point(0, 0);
+            this.PanelCalibrationPh.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelCalibrationPh.Name = "PanelCalibrationPh";
+            this.PanelCalibrationPh.Size = new System.Drawing.Size(8, 47);
+            this.PanelCalibrationPh.TabIndex = 3;
             // 
             // tableLayoutPanel26
             // 
@@ -637,7 +637,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.PanelInstantAkm, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.PanelCalibrationAkm, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel25, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 4, 0);
@@ -721,15 +721,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Son Kalibrasyon";
             // 
-            // PanelInstantAkm
+            // PanelCalibrationAkm
             // 
-            this.PanelInstantAkm.BackColor = System.Drawing.Color.Gray;
-            this.PanelInstantAkm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelInstantAkm.Location = new System.Drawing.Point(0, 0);
-            this.PanelInstantAkm.Margin = new System.Windows.Forms.Padding(0);
-            this.PanelInstantAkm.Name = "PanelInstantAkm";
-            this.PanelInstantAkm.Size = new System.Drawing.Size(8, 47);
-            this.PanelInstantAkm.TabIndex = 3;
+            this.PanelCalibrationAkm.BackColor = System.Drawing.Color.Gray;
+            this.PanelCalibrationAkm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCalibrationAkm.Location = new System.Drawing.Point(0, 0);
+            this.PanelCalibrationAkm.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelCalibrationAkm.Name = "PanelCalibrationAkm";
+            this.PanelCalibrationAkm.Size = new System.Drawing.Size(8, 47);
+            this.PanelCalibrationAkm.TabIndex = 3;
             // 
             // tableLayoutPanel25
             // 
@@ -816,7 +816,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel12, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel13, 5, 0);
-            this.tableLayoutPanel6.Controls.Add(this.PanelInstantPh, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.PanelCalibrationIletkenlik, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel27, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel6, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel47, 4, 0);
@@ -918,15 +918,15 @@
             this.buttonIletkenlikZero.UseVisualStyleBackColor = false;
             this.buttonIletkenlikZero.Click += new System.EventHandler(this.buttonIletkenlikZero_Click);
             // 
-            // PanelInstantPh
+            // PanelCalibrationIletkenlik
             // 
-            this.PanelInstantPh.BackColor = System.Drawing.Color.Gray;
-            this.PanelInstantPh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelInstantPh.Location = new System.Drawing.Point(0, 0);
-            this.PanelInstantPh.Margin = new System.Windows.Forms.Padding(0);
-            this.PanelInstantPh.Name = "PanelInstantPh";
-            this.PanelInstantPh.Size = new System.Drawing.Size(8, 47);
-            this.PanelInstantPh.TabIndex = 3;
+            this.PanelCalibrationIletkenlik.BackColor = System.Drawing.Color.Gray;
+            this.PanelCalibrationIletkenlik.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCalibrationIletkenlik.Location = new System.Drawing.Point(0, 0);
+            this.PanelCalibrationIletkenlik.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelCalibrationIletkenlik.Name = "PanelCalibrationIletkenlik";
+            this.PanelCalibrationIletkenlik.Size = new System.Drawing.Size(8, 47);
+            this.PanelCalibrationIletkenlik.TabIndex = 3;
             // 
             // tableLayoutPanel27
             // 
@@ -1040,72 +1040,72 @@
             // chartCalibrationSimulation
             // 
             this.chartCalibrationSimulation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea2.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
-            chartArea2.AxisX.InterlacedColor = System.Drawing.Color.White;
-            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisX.LineWidth = 3;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.AxisX.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea2.AxisX.ScaleBreakStyle.LineWidth = 10;
-            chartArea2.AxisX.ScaleBreakStyle.MaxNumberOfBreaks = 1;
-            chartArea2.AxisY.IsStartedFromZero = false;
-            chartArea2.AxisY.MajorGrid.Interval = 0D;
-            chartArea2.AxisY.MajorGrid.IntervalOffset = 0D;
-            chartArea2.AxisY.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea2.AxisY.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea2.AxisY.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Wave;
-            chartArea2.AxisY.ScaleBreakStyle.CollapsibleSpaceThreshold = 10;
-            chartArea2.AxisY.ScaleBreakStyle.MaxNumberOfBreaks = 1;
-            chartArea2.AxisY.ScaleBreakStyle.Spacing = 5D;
-            chartArea2.AxisY2.Maximum = 10D;
-            chartArea2.AxisY2.Minimum = 5D;
-            chartArea2.AxisY2.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Wave;
-            chartArea2.AxisY2.ScaleBreakStyle.CollapsibleSpaceThreshold = 10;
-            chartArea2.AxisY2.ScaleBreakStyle.Spacing = 1D;
-            chartArea2.AxisY2.ScaleBreakStyle.StartFromZero = System.Windows.Forms.DataVisualization.Charting.StartFromZero.Yes;
-            chartArea2.BackColor = System.Drawing.Color.White;
-            chartArea2.InnerPlotPosition.Auto = false;
-            chartArea2.InnerPlotPosition.Height = 88.59933F;
-            chartArea2.InnerPlotPosition.Width = 94.71543F;
-            chartArea2.InnerPlotPosition.X = 5F;
-            chartArea2.InnerPlotPosition.Y = 2F;
-            chartArea2.Name = "ChartArea1";
-            this.chartCalibrationSimulation.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.WhiteSmoke;
-            legend2.ItemColumnSpacing = 0;
-            legend2.Name = "Legend1";
-            this.chartCalibrationSimulation.Legends.Add(legend2);
+            chartArea1.Area3DStyle.LightStyle = System.Windows.Forms.DataVisualization.Charting.LightStyle.Realistic;
+            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.White;
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.LineWidth = 3;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisX.ScaleBreakStyle.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            chartArea1.AxisX.ScaleBreakStyle.LineWidth = 10;
+            chartArea1.AxisX.ScaleBreakStyle.MaxNumberOfBreaks = 1;
+            chartArea1.AxisY.IsStartedFromZero = false;
+            chartArea1.AxisY.MajorGrid.Interval = 0D;
+            chartArea1.AxisY.MajorGrid.IntervalOffset = 0D;
+            chartArea1.AxisY.MajorGrid.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisY.MajorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisY.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Wave;
+            chartArea1.AxisY.ScaleBreakStyle.CollapsibleSpaceThreshold = 10;
+            chartArea1.AxisY.ScaleBreakStyle.MaxNumberOfBreaks = 1;
+            chartArea1.AxisY.ScaleBreakStyle.Spacing = 5D;
+            chartArea1.AxisY2.Maximum = 10D;
+            chartArea1.AxisY2.Minimum = 5D;
+            chartArea1.AxisY2.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Wave;
+            chartArea1.AxisY2.ScaleBreakStyle.CollapsibleSpaceThreshold = 10;
+            chartArea1.AxisY2.ScaleBreakStyle.Spacing = 1D;
+            chartArea1.AxisY2.ScaleBreakStyle.StartFromZero = System.Windows.Forms.DataVisualization.Charting.StartFromZero.Yes;
+            chartArea1.BackColor = System.Drawing.Color.White;
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 88.59933F;
+            chartArea1.InnerPlotPosition.Width = 94.71543F;
+            chartArea1.InnerPlotPosition.X = 5F;
+            chartArea1.InnerPlotPosition.Y = 2F;
+            chartArea1.Name = "ChartArea1";
+            this.chartCalibrationSimulation.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.WhiteSmoke;
+            legend1.ItemColumnSpacing = 0;
+            legend1.Name = "Legend1";
+            this.chartCalibrationSimulation.Legends.Add(legend1);
             this.chartCalibrationSimulation.Location = new System.Drawing.Point(11, 318);
             this.chartCalibrationSimulation.Name = "chartCalibrationSimulation";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Color = System.Drawing.Color.Lime;
-            series3.CustomProperties = "LabelStyle=Center";
-            series3.Legend = "Legend1";
-            series3.MarkerSize = 8;
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Kalibrasyon Değeri";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Color = System.Drawing.Color.Blue;
-            series4.Legend = "Legend1";
-            series4.Name = "Referans Değeri";
-            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.chartCalibrationSimulation.Series.Add(series3);
-            this.chartCalibrationSimulation.Series.Add(series4);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Lime;
+            series1.CustomProperties = "LabelStyle=Center";
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 8;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Kalibrasyon Değeri";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Blue;
+            series2.Legend = "Legend1";
+            series2.Name = "Referans Değeri";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.chartCalibrationSimulation.Series.Add(series1);
+            this.chartCalibrationSimulation.Series.Add(series2);
             this.chartCalibrationSimulation.Size = new System.Drawing.Size(1166, 358);
             this.chartCalibrationSimulation.TabIndex = 54;
             this.chartCalibrationSimulation.Text = "chart1";
-            title2.Name = "Kalibrasyon Grafiği";
-            this.chartCalibrationSimulation.Titles.Add(title2);
+            title1.Name = "Kalibrasyon Grafiği";
+            this.chartCalibrationSimulation.Titles.Add(title1);
             // 
             // tableLayoutPanel19
             // 
@@ -1840,7 +1840,7 @@
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel76;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel77;
-        private System.Windows.Forms.Panel PanelInstantCozunmusOksijen;
+        private System.Windows.Forms.Panel PanelCalibrationKoi;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel78;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label79;
@@ -1848,7 +1848,7 @@
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Panel PanelInstantSicaklik;
+        private System.Windows.Forms.Panel PanelCalibrationPh;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label25;
@@ -1860,7 +1860,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel PanelInstantAkm;
+        private System.Windows.Forms.Panel PanelCalibrationAkm;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
@@ -1868,7 +1868,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Panel PanelInstantPh;
+        private System.Windows.Forms.Panel PanelCalibrationIletkenlik;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label26;

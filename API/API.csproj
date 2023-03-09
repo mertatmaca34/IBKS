@@ -41,7 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AToken.cs" />
+    <Compile Include="Models\Diagnostics.cs" />
+    <Compile Include="Models\DiagnosticType.cs" />
+    <Compile Include="Models\GetLastData.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\LoginResult.cs" />
+    <Compile Include="Models\ResultStatus.cs" />
+    <Compile Include="Models\SendCalibration.cs" />
+    <Compile Include="Models\SendData.cs" />
+    <Compile Include="Models\StationInformation.cs" />
+    <Compile Include="Models\StationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

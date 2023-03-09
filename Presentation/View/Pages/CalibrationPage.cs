@@ -1,6 +1,12 @@
-﻿using Calibration.Services;
+﻿using Business.Interfaces;
+using Business.Services;
+using Calibration.Services;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Presentation.View.Pages
@@ -8,6 +14,8 @@ namespace Presentation.View.Pages
 
     public partial class CalibrationPage : Form
     {
+        private readonly ICalibrationDTOService calibrationDTOService = new CalibrationDTOService();
+
         CalibrationService calibrationService = new CalibrationService();
 
         readonly List<Control> calibrationControls;
@@ -30,6 +38,8 @@ namespace Presentation.View.Pages
                 labelResultFactor,
                 labelActiveCalibration
             };
+
+            ColorStatementPanel();
         }
 
         private void buttonAKMZero_Click(object sender, EventArgs e)
@@ -50,6 +60,30 @@ namespace Presentation.View.Pages
         private void buttonKoiZero_Click(object sender, EventArgs e)
         {
             calibrationService.StartCalibration("Koi", "Zero", 10, calibrationControls);
+        }
+
+        private void ColorStatementPanel()
+        {
+            PanelCalibrationAkm.BackColor = CheckValidity("AKM");
+            PanelCalibrationAkm.BackColor = CheckValidity("KOi");
+            PanelCalibrationAkm.BackColor = CheckValidity("Ph");
+            PanelCalibrationAkm.BackColor = CheckValidity("Iletkenlik");
+        }
+
+        private Color CheckValidity(string parameter)
+        {
+            var calibrations = calibrationDTOService.GetAll();
+
+            var calibration = calibrations.LastOrDefault(c => c.Parameter == parameter);
+
+            if (calibration?.IsItValid == true)
+            {
+                return Color.Lime;
+            }
+            else
+            {
+                return Color.Red;
+            }
         }
     }
 }

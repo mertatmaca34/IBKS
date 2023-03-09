@@ -21,11 +21,10 @@ namespace Business.Services
             calibrationRepository.Add(calibrationDTO);
         }
 
-        public Array GetAll()
+        List<CalibrationDTO> ICalibrationDTOService.GetAll()
         {
             var calibrationDTOs = calibrationRepository.GetAll();
-
-            return calibrationDTOs.ToArray();
+            return calibrationDTOs;
         }
     }
 }

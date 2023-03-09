@@ -1,11 +1,12 @@
 ﻿using DataAccess.Models;
 using System;
+using System.Collections.Generic;
 
 namespace Business.Interfaces
 {
     public interface ICalibrationDTOService
     {
-        Array GetAll();
+        List<CalibrationDTO> GetAll();
         void Add(CalibrationDTO calibrationDTO);
     }
 }
