@@ -2,7 +2,7 @@
 
 namespace API.Models
 {
-    public class Diagnostics
+    public class Diagnostic
     {
         public DateTime? startDate { get; set; }
         public DateTime? endDate { get; set; }

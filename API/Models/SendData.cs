@@ -2,7 +2,7 @@
 
 namespace API.Models
 {
-    internal class SendData
+    public class SendData
     {
         public Guid? Stationid { get; set; }
         public DateTime? Readtime { get; set; }

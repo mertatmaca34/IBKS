@@ -4,6 +4,7 @@ using Calibration.Services;
 using DataAccess.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Threading;
@@ -59,15 +60,15 @@ namespace Presentation.View.Pages
 
         private void buttonKoiZero_Click(object sender, EventArgs e)
         {
-            calibrationService.StartCalibration("Koi", "Zero", 10, calibrationControls);
+            calibrationService.StartCalibration("KOi", "Zero", 10, calibrationControls);
         }
 
         private void ColorStatementPanel()
         {
             PanelCalibrationAkm.BackColor = CheckValidity("AKM");
-            PanelCalibrationAkm.BackColor = CheckValidity("KOi");
-            PanelCalibrationAkm.BackColor = CheckValidity("Ph");
-            PanelCalibrationAkm.BackColor = CheckValidity("Iletkenlik");
+            PanelCalibrationKoi.BackColor = CheckValidity("KOi");
+            PanelCalibrationPh.BackColor = CheckValidity("Ph");
+            PanelCalibrationIletkenlik.BackColor = CheckValidity("Iletkenlik");
         }
 
         private Color CheckValidity(string parameter)
@@ -84,6 +85,16 @@ namespace Presentation.View.Pages
             {
                 return Color.Red;
             }
+        }
+
+        private void TimerRefreshColors_Tick(object sender, EventArgs e)
+        {
+            var bGW = new BackgroundWorker();
+            bGW.DoWork += delegate
+            {
+                ColorStatementPanel();
+            };
+            bGW.RunWorkerAsync();
         }
     }
 }

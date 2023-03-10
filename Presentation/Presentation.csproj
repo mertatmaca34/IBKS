@@ -356,6 +356,10 @@
     <None Include="Resources\logoLongWhite.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj">
+      <Project>{e7bc2508-4d9f-4be2-9131-6c0524bf4842}</Project>
+      <Name>API</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{13fc3cb6-0be2-4230-b2d2-02235cb5377c}</Project>
       <Name>Business</Name>
@@ -367,6 +371,10 @@
     <ProjectReference Include="..\DataAccess\DataAcces.csproj">
       <Project>{830C0FA0-3558-42BA-A0EB-489CCB7B9CE0}</Project>
       <Name>DataAcces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Notifications\Notifications.csproj">
+      <Project>{e59ab142-da50-4d1f-8d35-7372dfa9f2e7}</Project>
+      <Name>Notifications</Name>
     </ProjectReference>
     <ProjectReference Include="..\PLC\PLC.csproj">
       <Project>{750656c5-5306-4a37-9e25-fe0f06d46b33}</Project>

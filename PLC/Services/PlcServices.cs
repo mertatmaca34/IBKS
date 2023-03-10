@@ -2,7 +2,8 @@
 using PLC.Utils;
 using Sharp7;
 using System;
-
+using System.ComponentModel;
+using System.Windows.Forms;
 namespace Presentation
 {
     public sealed class PlcServices
@@ -14,11 +15,14 @@ namespace Presentation
         public DB41DTO dB41DTO;
         public DB4DTO dB4DTO;
         public EBTagsDTO eBTagsDTO;
+        public MBTagsDTO mBTagsDTO;
         PlcServices()
         {
+            Control.CheckForIllegalCrossThreadCalls = false;
+
             client = new S7Client();
 
-            System.Windows.Forms.Timer plcTimer = new System.Windows.Forms.Timer
+            Timer plcTimer = new Timer
             {
                 Enabled = true,
                 Interval = 1000,
@@ -28,13 +32,20 @@ namespace Presentation
 
         private void plcTimer_Tick(object sender, EventArgs e)
         {
-            byte[] buffer4 = ReadData(4, 0, 12);
-            byte[] bufferEBTags = ReadData(0, 30);
-            byte[] buffer41 = ReadData(41, 0, 248);
+            byte[] buffer4;
+            byte[] buffer41;
+            byte[] bufferEBTags;
+            byte[] bufferMBTags;
+
+            buffer4 = ReadData(4, 0, 12);
+            buffer41 = ReadData(41, 0, 248);
+            bufferEBTags = ReadDataInput(0, 30);
+            bufferMBTags = ReadDataMB(0, 102);
 
             AssignDB4(buffer4);
             AssignDB41(buffer41);
             AssignEBTags(bufferEBTags);
+            AssignMBTags(bufferMBTags);
         }
 
         public static PlcServices Instance
@@ -81,7 +92,7 @@ namespace Presentation
             return buffer;
         }
 
-        public byte[] ReadData(int startByte, int size)
+        public byte[] ReadDataInput(int startByte, int size)
         {
             byte[] buffer = new byte[size];
 
@@ -95,9 +106,23 @@ namespace Presentation
             return buffer;
         }
 
+        public byte[] ReadDataMB(int startByte, int size)
+        {
+            byte[] buffer = new byte[size];
+
+            int result = client.MBRead(startByte, size, buffer);
+
+            if (result != 0)
+            {
+                client.EBRead(startByte, size, buffer);
+            }
+
+            return buffer;
+        }
+
         public DB41DTO AssignDB41(byte[] buffer)
         {
-            dB41DTO = new DB41DTO
+            var dB41DTO = new DB41DTO
             {
                 TesisDebi = Get.Real(buffer, 0, 60),
                 TesisGünlükDebi = Get.Real(buffer, 12, 60),
@@ -128,7 +153,7 @@ namespace Presentation
 
         public DB4DTO AssignDB4(byte[] buffer)
         {
-            dB4DTO = new DB4DTO
+            var dB4DTO = new DB4DTO
             {
                 SystemTime = Get.Time(buffer, 0)
             };
@@ -138,22 +163,38 @@ namespace Presentation
 
         public EBTagsDTO AssignEBTags(byte[] buffer)
         {
-            eBTagsDTO = new EBTagsDTO
+            var eBTagsDTO = new EBTagsDTO
             {
-                Kapi = Get.Bit(buffer, 25, 5),
-                Duman = Get.Bit(buffer, 1, 1),
-                SuBaskini = Get.Bit(buffer, 0, 7),
-                AcilStop = Get.Bit(buffer, 25, 7),
-                Pompa1Termik = Get.Bit(buffer, 27, 5),
-                Pompa2Termik = Get.Bit(buffer, 28, 0),
-                TemizSuTermik = Get.Bit(buffer, 28, 2),
-                YikamaTanki = Get.Bit(buffer, 28, 3),
-                Enerji = Get.Bit(buffer, 25, 6),
-                Pompa1CalisiyorMu = Get.Bit(buffer, 27, 4),
-                Pompa2CalisiyorMu = Get.Bit(buffer, 27, 7)
+                Kapi = Get.Input(buffer, 25, 5),
+                Duman = Get.Input(buffer, 1, 1),
+                SuBaskini = Get.Input(buffer, 0, 7),
+                AcilStop = Get.Input(buffer, 25, 7),
+                Pompa1Termik = Get.Input(buffer, 27, 5),
+                Pompa2Termik = Get.Input(buffer, 28, 0),
+                TemizSuTermik = Get.Input(buffer, 28, 2),
+                YikamaTanki = Get.Input(buffer, 28, 3),
+                Enerji = Get.Input(buffer, 25, 6),
+                Pompa1CalisiyorMu = Get.Input(buffer, 27, 4),
+                Pompa2CalisiyorMu = Get.Input(buffer, 27, 7)
             };
 
             return eBTagsDTO;
+        }
+        public MBTagsDTO AssignMBTags(byte[] buffer)
+        {
+            var mBTagsDTO = new MBTagsDTO
+            {
+                YikamaVarMi = Get.MB(buffer, 24, 1),
+                HaftalikYikamaVarMi = Get.MB(buffer, 24, 2),
+                ModAutoMu = Get.MB(buffer, 10, 6),
+                ModBakimMi = Get.MB(buffer, 10, 4),
+                ModKalibrasyonMu = Get.MB(buffer, 10, 5),
+                AkmTetik = Get.MB(buffer, 101, 1),
+                KoiTetik = Get.MB(buffer, 101, 2),
+                PhTetik = Get.MB(buffer, 101, 3)
+            };
+
+            return mBTagsDTO;
         }
     }
 }

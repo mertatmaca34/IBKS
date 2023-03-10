@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AToken.cs" />
-    <Compile Include="Models\Diagnostics.cs" />
+    <Compile Include="Models\Diagnostic.cs" />
     <Compile Include="Models\DiagnosticType.cs" />
     <Compile Include="Models\GetLastData.cs" />
     <Compile Include="Models\Login.cs" />
@@ -53,9 +57,18 @@
     <Compile Include="Models\StationInformation.cs" />
     <Compile Include="Models\StationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\APIService.cs" />
+    <Compile Include="Service\SendDataService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Service\" />
+    <ProjectReference Include="..\PLC\PLC.csproj">
+      <Project>{750656C5-5306-4A37-9E25-FE0F06D46B33}</Project>
+      <Name>PLC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -142,6 +143,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.tableLayoutPanel36 = new System.Windows.Forms.TableLayoutPanel();
             this.labelTimeRemain = new System.Windows.Forms.Label();
+            this.TimerRefreshColors = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel76.SuspendLayout();
             this.tableLayoutPanel77.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -1748,6 +1750,12 @@
             this.labelTimeRemain.TabIndex = 53;
             this.labelTimeRemain.Text = "Kalan Süre: ";
             // 
+            // TimerRefreshColors
+            // 
+            this.TimerRefreshColors.Enabled = true;
+            this.TimerRefreshColors.Interval = 1000;
+            this.TimerRefreshColors.Tick += new System.EventHandler(this.TimerRefreshColors_Tick);
+            // 
             // CalibrationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1947,5 +1955,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel36;
         private System.Windows.Forms.Label labelTimeRemain;
         public System.Windows.Forms.Label labelZeroRef;
+        private System.Windows.Forms.Timer TimerRefreshColors;
     }
 }
